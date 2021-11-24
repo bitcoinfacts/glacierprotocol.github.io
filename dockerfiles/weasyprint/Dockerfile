@@ -1,5 +1,7 @@
 FROM ubuntu
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 WORKDIR /tmp
 
 # WeasyPrint dependencies

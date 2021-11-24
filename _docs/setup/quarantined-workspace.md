@@ -59,10 +59,52 @@ first time and do **not** plan on executing the Deposit or Withdrawal protocol n
 
 7. Open a Terminal window by pressing Ctrl-Alt-T.
 8. Install the application software on the Q1 computer's RAM disk.
-    ```
-    $ cd ~/apps
-    $ sudo dpkg -i *.deb
-    ```
+    1. Install applications from the `apps` folder:
+        ```
+        $ cd ~/apps
+        $ sudo dpkg -i *.deb
+        ```
+
+    2. Install Bitcoin Core:
+        1. Run commands to import and verify the Bitcoin Core release
+            ```
+            $ cd ~/bitcoin
+            $ gpg --import laanwj-releases.asc
+            $ gpg --verify SHA256SUMS.asc
+            ```
+        
+        2. Ensure you see: `Good signature from "Wladimir J. van der Laan (Bitcoin Core binary release signing key) <laanwj@gmail.com>"`
+
+        3. Ignore this: `WARNING: This key is not certified with a trusted signature! There is no indication that the signature belongs to the owner.`
+
+        4. Ensure primary key fingerprint is: `01EA 5486 DE18 A882 D4C2  6845 90C8 019E 36C2 E964`
+
+        5. Verify the fingerprints in the fingerprint file match the fingerprint
+        of the downloaded file:
+            ```
+            $ sha256sum -c --ignore-missing SHA256SUMS.asc
+            ```
+        The following output should be displayed:
+            ```
+            bitcoin-0.21.1-x86_64-linux-gnu.tar.gz: OK
+            sha256sum: WARNING: 20 lines are improperly formatted
+            ```
+        6. Extract the bitcoin core archive:
+            ```
+            $ tar xf bitcoin-0.21.1-x86_64-linux-gnu.tar.gz
+            ```
+        7. Export the path to the Bitcoin Core binaries:
+            ```
+            $ export PATH=$PATH:$HOME/bitcoin/bitcoin-0.21.1/bin
+            ```
+        8. Double check the `bitcoin-cli` command:
+            ```
+            $ which bitcoin-cli
+            ```
+        Should return:
+            ```
+            /home/ubuntu/bitcoin/bitcoin-0.21.1/bin/bitcoin-cli
+            ```
 9. Change into the glacier directory. You'll be using this directory to execute
 software for the protocol.
     ```
@@ -80,3 +122,4 @@ to jot notes.
     3. Click the Text Editor icon.
     4. A blank window should appear.
 12. Repeat the above steps using the Q2 computer, Q2 SETUP USB and Q2 APP USB.
+ 

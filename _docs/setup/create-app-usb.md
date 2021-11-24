@@ -132,20 +132,15 @@ already. (See the instructions in Section III for details.)
         $ sudo apt-add-repository universe
         ```
         4. ```
-        $ sudo apt-add-repository ppa:bitcoin/bitcoin
-        ```
-        5. ```
         $ sudo apt-get update
         ```
     2. Download and perform integrity verification59 of software available from Ubuntu's package repository:
-        * **bitcoind**: [Bitcoin Core](https://bitcoincore.org/):
-        , which we'll use for cryptography & financial operations
         * **qrencode**: Used for creating QR codes to move data off quarantined
         computers
         * **zbar-tools**: Used for reading QR codes to import data into quarantined
         computers
             ```
-            $ sudo apt-get install qrencode=3.4.4-1 zbar-tools=0.10+doc-10ubuntu1 bitcoind
+            $ sudo apt-get install qrencode=3.4.4-1 zbar-tools=0.10+doc-10ubuntu1
             ```
     3. Copy that software to the Q1 APP USB.
         1. Create a folder for the application files that will be moved to the
@@ -161,8 +156,16 @@ already. (See the instructions in Section III for details.)
             1. Click on the File Manager icon in the launching dock:
             2. Navigate to the "Home" folder.
             3. Click and drag "apps" folder to the icon representing
-            the USB drive on the left panel. The USB drive will look like this,
-            but may have a different name:
+            the USB drive on the left panel.
+    4. Download [Bitcoin Core](https://bitcoincore.org/), which we'll use for cryptography & financial operations:
+        ```
+        $ mkdir ~/bitcoin
+        $ cd ~/bitcoin
+        $ wget https://bitcoin.org/laanwj-releases.asc
+        $ wget https://bitcoin.org/bin/bitcoin-core-0.21.1/SHA256SUMS.asc
+        $ wget https://bitcoin.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1-x86_64-linux-gnu.tar.gz
+        ```
+    Then drag the `~/bitcoin` folder to the Q1 APP USB.
 7. Click on the USB drive icon to verify that it has the correct files. The
 contents should look like this
     ```
