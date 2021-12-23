@@ -106,12 +106,12 @@ prepare your quarantined workspace.
            by your multisignature withdrawal policy.
            <pre>
            $ ./glacierscript.py create-deposit-data -m <span class="primary">required-keys</span> \
-           -n <span class="primary">total-keys</span>
+           -n <span class="primary">total-keys</span> --p2wsh
            </pre>
 
            For example, for a 2-of-4 withdrawal policy:
            ```
-           $ ./glacierscript.py create-deposit-data -m 2 -n 4
+           $ ./glacierscript.py create-deposit-data -m 2 -n 4 --p2wsh
            ```
         2. GlacierScript will prompt you to enter *N* 62-number lines of dice entropy and *N* lines of computer entropy.
         3. GlacierScript will output your cold storage data:
@@ -128,7 +128,7 @@ prepare your quarantined workspace.
            Key #4: 5K7idDARSfWLGjA926DFvVL8igZANsJsUcGo8vztmPH45iScp8K</span>
 
            <span class="warning" style="white-space: pre-wrap;">Cold storage address:
-           3Hy6A3rSXKRumyVqURBoiv4QpQLt6vMCzt
+           bc1qqyfedxx94quqjzqfrel7dphkk3uzw2pcgtunzpuexezu4qgtyj4q2q4yv2
 
            Redemption script:
            51410421167f7dac2a159bc3957e3498bb6a7c2f16874bf1fbbe5b523b3632d2c0c43f1b491f6f2f449ae45c9b0716329c0c2dbe09f3e5d4e9fb6843af083e222a70a441043704eafafd73f1c32fafe10837a69731b93c0179fa268fc325bdc08f3bb3056b002eac4fa58c520cc3f0041a097232afbe002037edd5ebdab2e493f18ef19e9052ae</span>
