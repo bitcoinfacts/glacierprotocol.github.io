@@ -29,12 +29,12 @@ Protocol unless explicitly instructed otherwise.</span>**
 
 1. If this is **not** your first time working with Glacier:
     1. Use a networked computer to access the latest full release of Glacier
-    ( not just the protocol document) at <https://github.com/GlacierProtocol/GlacierProtocol/releases>.
+    ( not just the protocol document) at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
     2. Open the protocol document (Glacier.pdf) within the ZIP file.
     3. Check the Release Notes (Appendix E) of the protocol document to see if
     there are any new versions of Glacier recommended.
     4. Whether or not you decide to upgrade, review the errata for the version
-    of Glacier you are using at <https://github.com/GlacierProtocol/GlacierProtocol/releases>.
+    of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
 2. Execute [Section VI of the Setup Protocol](/docs/setup/quarantined-workspace/) to
 prepare your quarantined workspace.
 3. Create entropy for private keys

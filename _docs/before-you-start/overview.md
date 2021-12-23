@@ -73,7 +73,7 @@ received.
 
 Glacier also utilizes GlacierScript, a software program that
 automates much of the manual work involved in executing the protocol.
-GlacierScript's [open source code](https://github.com/GlacierProtocol/GlacierProtocol) is straightforward and extensively
+GlacierScript's [open source code](https://github.com/bitcoinfacts/GlacierProtocol) is straightforward and extensively
 commented to facilitate easy review for flaws or vulnerabilities.
 
 ## Protocol Output

@@ -55,7 +55,7 @@ Privacy Considerations subsection for details.)
     of your funds with no recourse.</span>**
     3. Execute the transaction.
 5. Verify the deposit on the public blockchain.
-    1. Go to Blockstream.info, paste the address into the search bar, and press Enter.
+    1. Go to https://blockstream.info/, paste the address into the search bar, and press Enter.
     You'll be taken to a page that says "Address" at the top, with your
     <span class="warning">cold storage address</span> listed underneath.
     2. Within a couple of seconds you should be able to refresh this page and see your

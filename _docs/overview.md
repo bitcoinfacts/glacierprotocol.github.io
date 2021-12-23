@@ -48,7 +48,7 @@ Here's what you can trust about this protocol:
 Bitcoin technology and security experts. See our advisor list.
 * **Open source**: GlacierScript, the Glacier companion software, is open
 source. The code is straightforward and well-commented to facilitate easy review
-for flaws or vulnerabilities. [View it on Github](https://github.com/GlacierProtocol/GlacierProtocol).
+for flaws or vulnerabilities. [View it on Github](https://github.com/bitcoinfacts/GlacierProtocol).
 * **Community review**: The protocol has evolved in conjunction with the wider
 Bitcoin community. Early versions were circulated during development, and
 community feedback integrated. [See our list of contributors](/docs/contribute/acknowledgments/).
@@ -73,7 +73,6 @@ For most people, most of the time, the authors recommend storing Bitcoin using a
 high-quality online storage service. The pros and cons of the various online
 services are beyond the scope of this document, but most popular ones are fairly
 secure and easy to use. Some popular options are
-[Blockchain](https://blockchain.info/),
 [Coinbase](https://www.coinbase.com/),
 [Gemini](https://gemini.com/),
 and [Kraken](https://www.kraken.com/).

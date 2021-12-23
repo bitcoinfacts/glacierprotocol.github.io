@@ -24,7 +24,7 @@ already. (See the instructions in Section III for details.)
 
     1. Download the latest full release of Glacier (*not* just the protocol
     document) at
-    [https://github.com/GlacierProtocol/GlacierProtocol/releases](https://github.com/GlacierProtocol/GlacierProtocol/releases).
+    [https://github.com/bitcoinfacts/GlacierProtocol/releases](https://github.com/bitcoinfacts/GlacierProtocol/releases).
     2. Unpack the Glacier ZIP file into a staging area.
 
         1. When the download starts, Firefox will ask you if you want to open the
@@ -51,7 +51,7 @@ already. (See the instructions in Section III for details.)
         has changed (or that this warning has been removed), there is a
         security risk.** Stop and seek assistance.
 
-        1. Access Glacier's Keybase profile at https://keybase.io/glacierprotocol.
+        1. Access bitcoinfacts's Keybase profile at <https://keybase.io/bitcoinfacts>.
         2. Click the string of letters and numbers next to the key icon.
         3. In the pop-up that appears, locate the link reading "this key".
         4. Right-click the link and select "Save Link As..."
@@ -75,11 +75,11 @@ already. (See the instructions in Section III for details.)
            Expected output (timestamp will vary, but
            e-mail and fingerprint should match):
            <pre>
-           <span style="font-size: 10px;">gpg: Signature made Thu Jan 19 13:45:48 2017 PST using RSA key ID 4B43EAB0
-           gpg: Good signature from "Glacier Team <contact@glacierprotocol.org>"
+           <span style="font-size: 10px;">gpg: Signature made Sat Dec 18 12:23:10 2021 PST using RSA key ID B85C0836B6D7EE692354EBE652715E71074975D5
+           gpg: Good signature from "bitcoinfacts <bitcoinfacts1@protonmail.com>" [unknown]
            gpg: WARNING: This key is not certified with a trusted signature!
            gpg: There is no indication that the signature belongs to the owner.
-           Primary key fingerprint: E1AA EBB7 AC90 C1FE 80F0 1034 9D1B 7F53 4B43</span>
+           Primary key fingerprint: B85C 0836 B6D7 EE69 2354 EBE6 5271 5E71 0749 75D5</span>
            </pre>
 
            The warning message is expected, and is not cause for alarm.
@@ -119,51 +119,40 @@ already. (See the instructions in Section III for details.)
 5. Open the Glacier protocol document so that it is available for copy-pasting terminal commands.
 6. Install the remaining application software on the Q1 APP USB.
     1. Configure our system to enable access to the software we need in Ubuntu's
-    "package repository".On Ubuntu 16.04.01  [there is a bug](https://bugs.launchpad.net/ubuntu/+source/appstream/+bug/1601971) in Ubuntu's package manager that affects systems
-    running off a bootable Ubuntu USB. The commands in steps a and b are a
-    workaround.
+    "package repository".
         1. ```
-        $ sudo mv /var/cache/app-info/xapian/default /var/cache/app-info/xapian/default_old
-        ```
-        2. ```
-        $ sudo mv /var/cache/app-info/xapian/default_old /var/cache/app-info/xapian/default
-        ```
-        3. ```
         $ sudo apt-add-repository universe
         ```
-        4. ```
+        2. ```
         $ sudo apt-get update
         ```
-    2. Download and perform integrity verification59 of software available from Ubuntu's package repository:
+    2. Create a folder for the application files that will be moved to the
+    USB:
+        ```
+        $ mkdir ~/apps
+        ```
+    3. Download and perform integrity verification of software available from Ubuntu's package repository:
         * **qrencode**: Used for creating QR codes to move data off quarantined
         computers
         * **zbar-tools**: Used for reading QR codes to import data into quarantined
         computers
             ```
-            $ sudo apt-get install qrencode=3.4.4-1 zbar-tools=0.10+doc-10ubuntu1
+            $ cd ~/apps
+            $ apt download qrencode=4.1.1-1 zbar-tools=0.23.90-1
             ```
-    3. Copy that software to the Q1 APP USB.
-        1. Create a folder for the application files that will be moved to the
-        USB:
-            ```
-            $ mkdir ~/apps
-            ```
-        2. Copy the software into the apps folder:
-            ```
-            $ cp /var/cache/apt/archives/*.deb ~/apps
-            ```
-        3. Copy the contents of the apps folder to the Q1 APP USB:
-            1. Click on the File Manager icon in the launching dock:
-            2. Navigate to the "Home" folder.
-            3. Click and drag "apps" folder to the icon representing
-            the USB drive on the left panel.
-    4. Download [Bitcoin Core](https://bitcoincore.org/), which we'll use for cryptography & financial operations:
+    4.  Copy the contents of the apps folder to the Q1 APP USB:
+        1. Click on the File Manager icon in the launching dock:
+        2. Navigate to the "Home" folder.
+        3. Click and drag "apps" folder to the icon representing
+        the USB drive on the left panel.
+    5. Download [Bitcoin Core](https://bitcoincore.org/), which we'll use for cryptography & financial operations:
         ```
         $ mkdir ~/bitcoin
         $ cd ~/bitcoin
-        $ wget https://bitcoin.org/laanwj-releases.asc
-        $ wget https://bitcoin.org/bin/bitcoin-core-0.21.1/SHA256SUMS.asc
-        $ wget https://bitcoin.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1-x86_64-linux-gnu.tar.gz
+        $ wget https://keys.openpgp.org/vks/v1/by-email/jon@atack.com
+        $ wget https://bitcoincore.org/bin/bitcoin-core-22.0/SHA256SUMS.asc
+        $ wget https://bitcoincore.org/bin/bitcoin-core-22.0/SHA256SUMS
+        $ wget https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0-x86_64-linux-gnu.tar.gz
         ```
     Then drag the `~/bitcoin` folder to the Q1 APP USB.
 7. Click on the USB drive icon to verify that it has the correct files. The
@@ -171,34 +160,40 @@ contents should look like this
     ```
     apps
     glacier
+    bitcoin
     ```
 
-    Click the apps folder. It will have the following content.
+    Click the `apps` folder. It will have the following content.
     Note that the version number of the Bitcoin package may change as new
     versions are released. Future versions of Glacier may pin to a specific
     version.
 
     ```
-    bitcoind_0.13.2-xenial1_amd64.deb
-    libboost-chrono1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb
-    libboost-program-options1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb
-    libboost-thread1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb
-    libdb4.8++_4.8.30-xenial2_amd64.deb
-    libevent-core-2.0-5_2.0.21-stable-2_amd64.deb
-    libevent-pthreads-2.0-5_2.0.21-stable-2_amd64.deb
-    libqrencode3_3.4.4-1_amd64.deb
-    libsodium18_1.0.8-5_amd64.deb
-    libzbar0_0.10+doc-10ubuntu1_amd64.deb libzmq5_4.1.4-7_amd64.deb
-    qrencode_3.4.4-1_amd64.deb zbar-tools_0.10+doc-10ubuntu1_amd64.deb
+    qrencode_4.1.1-1_amd64.deb
+    zbar-tools_0.23.90-1_amd64.deb
     ```
-    Click the glacier folder. It will have the following content:
+
+    Click the `bitcoin` folder. It will have the following content:
     ```
-    base58.py
-    Glacier.pdf
-    glacierscript.py
-    LICENSE README.md
+    jon@atack.com
     SHA256SUMS
+    SHA256SUMS.asc
+    bitcoin-22.0-x86_64-linux-gnu.tar.gz
+    ```
+
+    Click the `glacier` folder. It will have the following content:
+    ```
+    t
+    sign-steps.txt
+    glacierscript.py
+    base58.py
     SHA256SUMS.sig
+    SHA256SUMS
+    README.md
+    Makefile
+    LICENSE
+    Glacier.pdf
+    .gitignore
     ```
 8. Eject and physically remove the Q1 APP USB from the SETUP 1 computer.
 

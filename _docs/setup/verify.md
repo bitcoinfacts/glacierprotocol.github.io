@@ -22,9 +22,9 @@ always a verified copy of the document available.
 permission to install new software on. We'll refer to this computer as the
 "SETUP 1" computer.
 2. Review the errata for the version of Glacier you are using at
-https://github.com/GlacierProtocol/GlacierProtocol/releases.
+https://github.com/bitcoinfacts/GlacierProtocol/releases.
 3. Download the latest full release of Glacier (*not* just the protocol document)
-at https://github.com/GlacierProtocol/GlacierProtocol/releases.
+at https://github.com/bitcoinfacts/GlacierProtocol/releases.
 4. If your browser does not automatically extract the ZIP file contents into a
 folder within your downloads directory, do so.
 5. Rename the folder to "glacier."
@@ -57,7 +57,7 @@ that's fine; proceed as normal.)
   individuals from the Bitcoin community.
   ">seek assistance</a>.
 
-    1. Access Glacier's Keybase profile at <https://keybase.io/glacierprotocol>.
+    1. Access bitcoinfacts's Keybase profile at <https://keybase.io/bitcoinfacts>.
     2. Click the string of letters and numbers next to the key icon.
     3. In the pop-up that appears, locate the link reading "this key".
     3. Right-click the link and select "Save Link As..." or "Download Linked File
@@ -127,10 +127,10 @@ https://en.wikipedia.org/wiki/Digital_signature.
        Expected output (timestamp will vary, but e-mail and fingerprint should match):
        <pre>
        <span style="font-size: 10px;">gpg: Signature made Fri Feb 10 22:23:45 2017 PST using RSA key ID 4B43EAB0
-       gpg: Good signature from "Glacier Team <contact@glacierprotocol.org>"
+       gpg: Good signature from "bitcoinfacts <bitcoinfacts1@protonmail.com>" [unknown]
        gpg: WARNING: This key is not certified with a trusted signature!
        gpg:          There is no indication that the signature belongs to the owner.
-       Primary key fingerprint: E1AA EBB7 AC90 C1FE 80F0  1034 9D1B 7F53 4B43 EAB0</span>
+       Primary key fingerprint: B85C 0836 B6D7 EE69 2354 EBE6 5271 5E71 0749 75D5</span>
        </pre>
        The warning message is expected, and is not cause
        <a href="#" class="popovers" data-toggle="popover" data-placement="top" title=""

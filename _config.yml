@@ -3,7 +3,7 @@ description: The step-by-step protocol for storing bitcoins in a highly secure w
 incremental: true
 show_dir_listing: false
 permalink: pretty
-url: "https://GlacierProtocol.github.io"
+url: "https://bitcoinfacts.github.io/glacierprotocol.github.io/"
 timezone: America/Los_Angeles
 
 # Set this if the repo is for a project, e.g
@@ -14,8 +14,8 @@ baseurl:
 exclude: [".git", ".gitignore", "_build", "dockerfiles", "Makefile", "README.md", "todo.md"]
 
 # Urls to social networks
-git_address: https://github.com/GlacierProtocol/glacierprotocol.github.io
-git_edit_address: https://github.com/GlacierProtocol/glacierprotocol.github.io/edit/master
+git_address: https://github.com/bitcoinfacts/glacierprotocol.github.io
+git_edit_address: https://github.com/bitcoinfacts/glacierprotocol.github.io/edit/master
 twitter_address: https://twitter.com/glacierprotocol
 gitter_address: https://gitter.im/glacierprotocol/lobby
 

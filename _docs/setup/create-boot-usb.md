@@ -36,38 +36,43 @@ first have to propagate itself to the Non-Quarantined OS USB).
 1. Perform the following steps on your SETUP 1 computer.
 2. If you are not already reading this document on the SETUP 1 computer, open a
 copy there.
-3. Download Ubuntu by going to this link:
-
-    [http://old-releases.ubuntu.com/releases/xenial/ubuntu-16.04.1-desktop-amd64.iso](http://old-releases.ubuntu.com/releases/xenial/ubuntu-16.04.1-desktop-amd64.iso)
-    Wait until the download is complete.
-
-4. Open a terminal window.
+3. Open a terminal window.
 
     1. **Windows**: Press Windows-R, type "powershell" and click OK.
     2. **macOS**: Click the Searchlight (magnifying glass) icon in the menu bar,
     and type "terminal". Select the Terminal application from the search results.
     3. **Linux**: Varies; on Ubuntu, press Ctrl-Alt-T. (On Ubuntu, press
     Ctrl-Alt-T.)
+4. Change the terminal window’s active folder to the Downloads folder:
 
-5. Verify the integrity of the Ubuntu download.
+        Windows: > cd $HOME/Downloads
+        macOS: $ cd $HOME/Downloads
+        Linux: $ cd $HOME/Downloads
+5. Download Ubuntu:
+    ```
+    $ wget https://releases.ubuntu.com/21.10/ubuntu-21.10-desktop-amd64.iso
+    ```
+    Wait until the download is complete.
+
+6. Verify the integrity of the Ubuntu download:
 
     1. Change the terminal window's active folder to the folder where you
     downloaded Ubuntu, customizing the folder name if necessary:
 
         1. **Windows**: `> cd $HOME/Downloads`
-        2. **macOs**: `$ cd $HOME/Downloads`
+        2. **macOS**: `$ cd $HOME/Downloads`
         3. **Linux**: `$ cd $HOME/Downloads`
 
     2. View the fingerprint of the file:
 
-        1. **Windows**: `> Get-FileHash -a sha256 ubuntu-16.04.1-desktop-amd64.iso`
-        2. **macOs**: `$ shasum -a 256 ubuntu-16.04.1-desktop-amd64.iso`
-        3. **Linux**: `$ sha256sum ubuntu-16.04.1-desktop-amd64.iso`
+        1. **Windows**: `> Get-FileHash -a sha256 ubuntu-21.10-desktop-amd64.iso`
+        2. **macOS**: `$ shasum -a 256 ubuntu-21.10-desktop-amd64.iso`
+        3. **Linux**: `$ sha256sum ubuntu-21.10-desktop-amd64.iso`
 
     3. The following fingerprint should be displayed:
 
         ```
-        dc7dee086faabc9553d5ff8ff1b490a7f85c379f49de20c076f11fb6ac7c0f34
+        f8d3ab0faeaecb5d26628ae1aa21c9a13e0a242c381aa08157db8624d574b830
         ```
 
         It's not important to check every single character when visually
@@ -80,10 +85,10 @@ copy there.
         security analysis, see the design document.
 
         You can verify this is the official Ubuntu fingerprint
-        [here](http://releases.ubuntu.com/16.04.1/SHA256SUMS),
+        [here](http://releases.ubuntu.com/21.10/SHA256SUMS),
         or follow Ubuntu's full verification process using this guide.
 
-6. Create the SETUP 1 BOOT USB.
+7. Create the SETUP 1 BOOT USB.
 
     1. **Windows**
         1. Download the
@@ -95,7 +100,7 @@ copy there.
         4. Next to the text "Create a bootable disk using", select "ISO Image"
         in the dropdown.
         5. Click the CD icon next to the "ISO Image" dropdown.
-        6. A file explorer will pop up. Select `ubuntu-16.04.1-desktop-amd64.iso`
+        6. A file explorer will pop up. Select `ubuntu-21.10-desktop-amd64.iso`
         from your downloads folder and click Open.
         7. Click Start.
         8. If prompted to download Syslinux software, click "Yes".
@@ -107,7 +112,7 @@ copy there.
         1. Prepare the Ubuntu download for copying to the USB.
             ```
             $ cd $HOME/Downloads
-            $ hdiutil convert ubuntu-16.04.1-desktop-amd64.iso -format UDRW -o ubuntu-16.04.1-desktop-amd64.img
+            $ hdiutil convert ubuntu-21.10-desktop-amd64.iso -format UDRW -o ubuntu-21.10-desktop-amd64.img
             ```
         2. Determine the macOS "device identifier" for the Boot USB.
             1. `$ diskutil list`
@@ -123,7 +128,7 @@ copy there.
                 1. The device identifier is the part of the new section header
                 that comes before (external, physical) (for example /dev/disk2).
 
-        3. Put Ubuntu on the SETUP 1 BOOT USB.
+        3. Put Ubuntu on the SETUP 1 BOOT USB:
             1. First, unmount the usb
                <pre>
                $ diskutil unmountDisk <span class="primary">USB-device-identifier-here</span>
@@ -132,12 +137,12 @@ copy there.
             device identifier; <span style="color: red;">using the wrong one could overwrite your hard
             drive!</span>**
                <pre>
-               $ sudo dd if=ubuntu-16.04.1-desktop-amd64.img.dmg \
+               $ sudo dd if=ubuntu-21.10-desktop-amd64.img.dmg \
                of=<span class="primary">USB-device-identifier-here</span> bs=1m
                </pre>
                Example:
                ```
-               $ sudo dd if=ubuntu-16.04.1-desktop-amd64.img.dmg of=/dev/disk2 bs=1m
+               $ sudo dd if=ubuntu-21.10-desktop-amd64.img.dmg of=/dev/disk2 bs=1m
                ```
             3. Enter your administrator password when requested.
             4. Wait several minutes for the copying process to complete. When
@@ -161,14 +166,14 @@ copy there.
                 ```
             6.  
                 ```
-                $ sudo cmp -n `stat -f '%z' ubuntu-16.04.1-desktop-amd64.img.dmg` ubuntu-16.04.1-desktop-amd64.img.dmg USB-device-identifier-here
+                $ sudo cmp -n `stat -f '%z' ubuntu-21.10-desktop-amd64.img.dmg` ubuntu-21.10-desktop-amd64.img.dmg USB-device-identifier-here
                 ```
             7. Wait a few minutes for the verification process to complete.
             8. If all goes well, the command will output no data, returning to
             your usual terminal prompt.
             9. If there is a discrepancy, you’ll see a message like:
                 ```
-                ubuntu-16.04.1-desktop-amd64.img.dmg /dev/disk2
+                ubuntu-21.10-desktop-amd64.img.dmg /dev/disk2
                 differ: byte 1, line 1
                 ```
                 If you see a message like this, STOP -- this may be a security
@@ -176,13 +181,13 @@ copy there.
                 issue persists, try using a different USB drive or a different
                 Setup Computer.
 
-    3. **Ubuntu**
+    3. **Ubuntu Desktop**
         1. If this is your first time using Ubuntu, note:
             1. You can copy-paste text in most applications (e.g. Firefox) by
             pressing **Ctrl-C** or **Ctrl-V**.
             2. You can copy-paste text in a *terminal window* by pressing
             **Ctrl-Shift-C** or **Ctrl-Shift-V**.
-        2. Put Ubuntu on the SETUP BOOT 1 USB.
+        2. Put Ubuntu on the SETUP BOOT 1 USB:
             1. Open the Ubuntu search console by clicking the purple
             circle/swirl icon in the upper-left corner of the screen.
             2. Type "startup disk creator" in the text box that appears
@@ -201,7 +206,7 @@ copy there.
             7. Click "Make Startup Disk" and then click "Yes".
             8. Wait a few minutes for the copying process to complete.
 
-        3. Verify the integrity of the SETUP 1 BOOT USB (i.e. no errors or malware
+        3. Verify the integrity of the SETUP 1 BOOT USB (i.e. no errors or malware infection):
             1. On your desktop, right-click the corresponding USB drive icon in
             your dock and select Eject from the pop-up menu.
             2. Remove the USB drive from the USB slot and immediately
@@ -220,14 +225,77 @@ copy there.
                 ```
             5.  
                 <pre>
-                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desktop-amd64.iso` ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
+                $ sudo cmp -n `stat -c '%s' ubuntu-21.10-desktop-amd64.iso`
+                ubuntu-21.10-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
             6. If prompted for a password, enter the computer's root password.
             7. Wait a few minutes for the verification process to complete.
             8. If all goes well, the command will output no data, returning to
             your usual terminal prompt.
             9. If there is an issue, you'll see a message like:
                 ```
-                ubuntu-16.04.1-desktop-amd64.iso /dev/sda differ:
+                ubuntu-21.10-desktop-amd64.iso /dev/sda differ:
+                byte 1, line 1
+                ```
+                If you see a message like this, STOP -- this may be a security
+                risk. Restart this section from the beginning. If the issue
+                persists, try using a different USB drive or a different Setup
+                Computer.
+    
+    3. **Ubuntu Terminal**
+        1. Put Ubuntu on the SETUP BOOT 1 USB:
+            1. Insert your USB stick and type the following df command to see if it is mounted automatically on Ubuntu desktop:
+                ```
+                $ df
+                ```
+            2. Unmount the USB drive. See below sample output.
+
+                Sample output:
+                ```
+                Filesystem  1K-blocks  Used Available Use% Mounted on
+                udev      16432268      0  16432268   0% /dev
+                tmpfs     3288884   26244   3262640   1% /run
+                tmpfs     3288880      24   3288856   1% /run/user/119
+                tmpfs     3288880      72   3288808   1% /run/user/1000
+                /dev/sda1 1467360 1467360   0         100% /media/vivek/data
+                ```
+                
+                In this case, you need to unmount `sda1`:
+                ```
+                $ sudo umount /dev/sda1
+                ```
+
+            3. Type the following dd command to create a bootable USB image from the .iso file, replacing `/dev/sda` with the equivalent path on your system:
+                ```
+                $ sudo dd if=ubuntu-21.10-desktop-amd64.iso of=/dev/sda bs=1M
+                ```
+        2. Verify the integrity of the SETUP 1 BOOT USB (i.e. no errors or malware infection):
+            1. On your desktop, right-click the corresponding USB drive icon in
+            your dock and select Eject from the pop-up menu.
+            2. Remove the USB drive from the USB slot and immediately
+            <a href="#" class="popovers" data-toggle="popover" data-placement="top" title=""
+            data-content="
+            Technical details: In order to avoid detection, it's conceivable that malware
+            might wait until a USB drive is in the process of being ejected (and all
+            integrity checks presumably completed) before infecting the USB. Ejecting and
+            re-inserting the USB before integrity checking is a simple workaround to
+            defend against this.
+            ">re-insert it</a>.
+            3. Wait 10 seconds for the operating system to recognize the USB.
+            4.  
+                ```
+                $ cd $HOME/Downloads
+                ```
+            5.  
+                <pre>
+                $ sudo cmp -n `stat -c '%s' ubuntu-21.10-desktop-amd64.iso`
+                ubuntu-21.10-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
+            6. If prompted for a password, enter the computer's root password.
+            7. Wait a few minutes for the verification process to complete.
+            8. If all goes well, the command will output no data, returning to
+            your usual terminal prompt.
+            9. If there is an issue, you'll see a message like:
+                ```
+                ubuntu-21.10-desktop-amd64.iso /dev/sda differ:
                 byte 1, line 1
                 ```
                 If you see a message like this, STOP -- this may be a security
@@ -235,7 +303,7 @@ copy there.
                 persists, try using a different USB drive or a different Setup
                 Computer.
 
-7. Create the Q1 BOOT USB
+8. Create the Q1 BOOT USB
     1. Boot the SETUP 1 computer from the SETUP 1 BOOT USB.
         1. Reboot the computer.
         2. Press your laptop's key sequence to bring up the boot device
@@ -300,7 +368,7 @@ copy there.
             6. Click the cone-shaped WiFi icon near the right side of the menu
             bar again. There should be a list of WiFi networks this time.
         3. Select your WiFi network from the list and enter the password.
-    3. Repeat steps 1-6 using the SETUP 1 computer to create the Q1 BOOT USB
+    3. Repeat steps 1-7 using the SETUP 1 computer to create the Q1 BOOT USB
     rather than the SETUP 1 BOOT USB.
         1. **The instruction to plug a Quarantined Boot USB into your Setup
         computer should raise a red flag for you, because <span style="color: red;">you should never
@@ -311,13 +379,13 @@ copy there.
         2. Because you have booted the SETUP 1 computer off the SETUP 1 BOOT
         USB, you will follow the instructions for Ubuntu, even if your computer
         normally runs Windows or macOS.
-        3. Immediately after you are finished executing steps 1-6 with the Q1
+        3. Immediately after you are finished executing steps 1-7 with the Q1
         BOOT USB, remove the Q1 BOOT USB from the SETUP 1 computer.
             1. On your desktop, right-click the corresponding USB drive icon
             in your dock and select Eject from the pop-up menu.
             2. Remove the USB drive from the USB slot.
         4. **The Q1 BOOT USB is now eternally quarantined. It should never again
         be plugged into anything besides the Q1 computer.**
-8. Create the SETUP 2 BOOT USB and Q2 BOOT USB
-    1. Repeat steps 1-7 using the SETUP 2 computer, SETUP 2 BOOT USB, and Q2
+9. Create the SETUP 2 BOOT USB and Q2 BOOT USB
+    1. Repeat steps 1-8 using the SETUP 2 computer, SETUP 2 BOOT USB, and Q2
     BOOT USB.
