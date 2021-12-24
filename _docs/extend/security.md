@@ -57,7 +57,7 @@ own wallet software. Instead, first export a raw signed transaction, and use a
 service like Blockstream.info to verify the transaction is actually sending the funds to
 the correct address.
 * **Avoid software random number generators**: Use a
-[hardware random number generator](https://en.wikipedia.org/wiki/Comparison_of_hardware_random_number_generators)
+[hardware random number generator](https://en.everybodywiki.com/Comparison_of_hardware_random_number_generators)
 instead.
 
 ## Side channel security
