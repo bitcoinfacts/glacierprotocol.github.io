@@ -21,10 +21,9 @@ always a verified copy of the document available.
 1. Find a computer which has Internet access, printer access, and which you have
 permission to install new software on. We'll refer to this computer as the
 "SETUP 1" computer.
-2. Review the errata for the version of Glacier you are using at
-https://github.com/bitcoinfacts/GlacierProtocol/releases.
+2. Review the errata for the version of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
 3. Download the latest full release of Glacier (*not* just the protocol document)
-at https://github.com/bitcoinfacts/GlacierProtocol/releases.
+at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
 4. If your browser does not automatically extract the ZIP file contents into a
 folder within your downloads directory, do so.
 5. Rename the folder to "glacier."
