@@ -26,9 +26,9 @@ RUN pip3 install WeasyPrint
 
 # Install Pandoc
 # TODO: consider removing since its no longer in use
-RUN wget https://github.com/jgm/pandoc/releases/download/2.1.3/pandoc-2.1.3-linux.tar.gz && \
-  tar -xzf pandoc-2.1.3-linux.tar.gz && \
-  mv pandoc-2.1.3/bin/* /usr/local/bin
+# RUN wget https://github.com/jgm/pandoc/releases/download/2.16.2/pandoc-2.16.2-linux-amd64.tar.gz && \
+#   tar -xzf pandoc-2.16.2-linux-amd64.tar.gz && \
+#   mv pandoc-2.16.2/bin/* /usr/local/bin
 
 ENTRYPOINT ["weasyprint"]
 CMD ["--help"]

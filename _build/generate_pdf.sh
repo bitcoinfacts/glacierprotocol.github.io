@@ -15,7 +15,7 @@ check_clean_state() {
 
 generate_pdf_source() {
   echo "Concatenating all markdown pages into a single one"
-  docker run -v $(pwd):/src joaofnfernandes/catmd:latest \
+  docker run -v $(pwd):/src bitcoinfacts/catmd:latest \
     --order-file /src/_data/docs_toc.yml \
     --path-dir /src/_docs \
     --out /src/pdf.md
