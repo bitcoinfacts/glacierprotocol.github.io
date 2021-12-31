@@ -31,7 +31,7 @@ run_site() {
   docker run -dit --rm --name $CONTAINER_NAME_SITE \
     -v $(pwd):/usr/src/app \
     -p $WEBSITE_PORT:$WEBSITE_PORT \
-    starefossen/github-pages:172 jekyll serve -d /_site -H 0.0.0.0 -P $WEBSITE_PORT
+    githubpages jekyll serve -d /_site -H 0.0.0.0 -P $WEBSITE_PORT
 }
 
 poll_site() {

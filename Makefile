@@ -31,12 +31,12 @@ spell: run-spell-check
 ################################################################################
 
 .PHONY: run-site
-run-site:
+run-site: dockerfiles/bin/.githubpages
 	@echo "Deploying website"
 	@docker run -dit --rm --name $(CONTAINER_SITE_NAME) \
 		-v "$(shell pwd)":/usr/src/app \
 		-p 4000:4000 \
-		starefossen/github-pages:172
+		githubpages
 	@echo "Website running at http://localhost:4000"
 
 .PHONY: run-stop-site
@@ -64,6 +64,12 @@ clean:
 ################################################################################
 #	Build Docker images
 ################################################################################
+dockerfiles/bin/.githubpages: dockerfiles/githubpages/Dockerfile
+	@echo "Building Docker image with website (githubpages)"
+	@docker build -t githubpages $(<D)
+	@mkdir -p dockerfiles/bin
+	@touch $@
+
 dockerfiles/bin/.spellcheck: dockerfiles/spellcheck/Dockerfile dockerfiles/spellcheck/.spelling
 	@echo "Building Docker image with spellchecker"
 	@docker build -t spellcheck $(<D)
@@ -71,7 +77,7 @@ dockerfiles/bin/.spellcheck: dockerfiles/spellcheck/Dockerfile dockerfiles/spell
 	@touch $@
 
 dockerfiles/bin/.weasyprint: dockerfiles/weasyprint/Dockerfile
-	@echo "Building Docker image with Pandoc and WeasyPrint"
+	@echo "Building Docker image with WeasyPrint"
 	@docker build -t weasyprint $(<D)
 	@mkdir -p dockerfiles/bin
 	@touch $@
