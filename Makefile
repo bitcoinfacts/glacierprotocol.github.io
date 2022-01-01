@@ -81,9 +81,3 @@ dockerfiles/bin/.weasyprint: dockerfiles/weasyprint/Dockerfile
 	@docker build -t weasyprint $(<D)
 	@mkdir -p dockerfiles/bin
 	@touch $@
-
-# dockerfiles/bin/.pandoc: dockerfiles/pandoc/dockerfile dockerfiles/pandoc/entrypoint.sh
-# 	@echo "Building Docker image with Pandoc"
-# 	@docker build -t pandoc $(<D)
-# 	@mkdir -p dockerfiles/bin
-# 	@touch $@
