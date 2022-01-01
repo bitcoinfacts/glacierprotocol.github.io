@@ -1,6 +1,5 @@
 SHA = $(shell git rev-parse --short HEAD)
 CONTAINER_SITE_NAME=com.glacier.website
-TOC_FILE=_data/docs_toc.yml
 SOURCE_DIR=_docs
 SOURCE_MD=$(shell find $(SOURCE_DIR) -type f -iname '*.md')
 SOURCE_HTML=$(shell find _includes _layouts -type f -iname '*.html')

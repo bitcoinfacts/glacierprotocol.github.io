@@ -184,7 +184,6 @@ contents should look like this
     Click the `glacier` folder. It will have the following content:
     ```
     t
-    sign-steps.txt
     glacierscript.py
     base58.py
     SHA256SUMS.sig
