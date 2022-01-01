@@ -72,9 +72,3 @@ our randomness is not vulnerable to dice bias.
 Use an entropy test suite such as [ent](http://www.fourmilab.ch/random/) to verify the quality of
 generated entropy before it's used.
 
-## Bitcoin Core Version
-Pinning Currently, we download Bitcoin Core on to the Quarantined App
-USBs via the Ubuntu Package archive. However, because Bitcoin is
-a privately-managed archive, it only hosts the latest release, rather than
-all previous versions. This prevents us from pinning the protocol to use
-a specific release (desireable for ongoing compatibility).
