@@ -4,7 +4,7 @@ set -e
 CONTAINER_NAME_SITE=com.glacier.pdf
 FILENAME=assets/glacier.pdf
 # Set this if you want to keep intermediate artifacts for debugging
-KEEP_ARTIFACTS=
+KEEP_ARTIFACTS=1
 WEBSITE_PORT=4000
 
 check_clean_state() {

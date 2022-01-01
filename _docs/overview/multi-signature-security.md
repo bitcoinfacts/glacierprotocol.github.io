@@ -120,7 +120,8 @@ they need to do so.
 However, there are significant drawbacks:
 
 * **Privacy**: Other signatories will have the ability to see your balance.
-Technical details: Every private key needs to be packaged with the multisig
+
+  Technical details: Every private key needs to be packaged with the multisig
 redemption script (since losing all redemption scripts is just as bad as losing
 all keys). Redemption scripts, however, allow one to view funds. An alternate
 version of this protocol could be created using a different multisig approach
