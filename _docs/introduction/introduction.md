@@ -34,6 +34,6 @@ already possess bitcoins and wish to store them more securely.
 
 If you are already familiar with Bitcoin security concepts and are certain that
 you want high security cold storage, you may prefer to read
-[Trusting This Protocol](#trusting-this-protocol) and then skip to the section
-[Choosing a Multisignature Withdrawal Policy](/docs/overview/multi-signature-security#choosing-a-multisignature-withdrawal-policy).
+[Trusting This Protocol](/docs/introduction/trusting-this-protocol) and then skip to the section
+[Choosing a Multisignature Withdrawal Policy](/docs/background/multisignature#choosing-a-multisignature-withdrawal-policy).
 
