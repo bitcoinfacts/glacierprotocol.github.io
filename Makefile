@@ -33,8 +33,9 @@ spell: run-spell-check
 .PHONY: run-site
 run-site: dockerfiles/bin/.githubpages
 	@echo "Deploying website"
-	@docker run -dit --rm --name $(CONTAINER_SITE_NAME) \
+	@docker run -dit --rm \
 		-v "$(shell pwd)":/usr/src/app \
+		--name $(CONTAINER_SITE_NAME) \
 		-p 4000:4000 \
 		githubpages
 	@echo "Website running at http://localhost:4000"

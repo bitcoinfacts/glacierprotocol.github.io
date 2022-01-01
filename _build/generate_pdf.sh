@@ -5,7 +5,7 @@ CONTAINER_NAME_SITE=com.glacier.pdf
 FILENAME=assets/glacier.pdf
 # Set this if you want to keep intermediate artifacts for debugging
 KEEP_ARTIFACTS=
-WEBSITE_PORT=40000
+WEBSITE_PORT=4000
 
 check_clean_state() {
   if [ -n "$(docker ps --filter name=$CONTAINER_NAME_SITE --quiet)" ]; then
@@ -15,7 +15,8 @@ check_clean_state() {
 
 generate_pdf_source() {
   echo "Concatenating all markdown pages into a single one"
-  docker run -v $(pwd):/src bitcoinfacts/catmd:latest \
+  docker run --rm -v $(pwd):/src \
+  bitcoinfacts/catmd:latest \
     --order-file /src/_data/docs_toc.yml \
     --path-dir /src/_docs \
     --out /src/pdf.md
@@ -28,10 +29,10 @@ rm_artifacts() {
 
 run_site() {
   echo "Deploying Glacier website"
-  docker run -dit --rm --name $CONTAINER_NAME_SITE \
+  docker run -dit --rm \
     -v $(pwd):/usr/src/app \
-    -p $WEBSITE_PORT:$WEBSITE_PORT \
-    githubpages jekyll serve -d /_site -H 0.0.0.0 -P $WEBSITE_PORT
+    --name $CONTAINER_NAME_SITE \
+    githubpages
 }
 
 poll_site() {
