@@ -1,7 +1,5 @@
 ---
-title: Extend Glacier security
-description: Learn how to extend the security of Glacier, beyond what's already
-  considered in the main protocol.
+title: Extend Glacier Security
 redirect_from: /docs/extend/
 ---
 

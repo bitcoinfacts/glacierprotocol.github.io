@@ -1,7 +1,5 @@
 ---
-title: Attack surface and failure points
-description: Learn about the attack survace for Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+title: Attack Surface and Failure Points
 ---
 
 This list describes the attack surface and other failure points for Glacier. We
@@ -18,7 +16,7 @@ Most attacks require the presence of malware, either in or near the quarantined 
 * Ways in which a malware infection might occur
 * Ways in which a critical failure might happen (possibly, but not necessarily, due to a malware infection)
 
-## Malware infection vectors
+## Malware Infection Vectors
 
 * Software
   * OS/App software has malware (i.e. malicious code) built into official distributions. In particular, Glacier relies on the following packages and their dependencies NOT to distribute malicious code:
@@ -41,9 +39,9 @@ Most attacks require the presence of malware, either in or near the quarantined 
 e.g. a  [USB JTAG exploit](http://www.itnews.com.au/news/intel-debugger-interface-open-to-hacking-via-usb-446889)  or chip-level backdoors (such as
 [this rootkit](https://www.wired.com/2016/06/demonically-clever-backdoor-hides-inside-computer-chip/)). "Malware" usually refers to software, but we're using it here more broadly to mean "computing technology which undermines the integrity of the computing environment in which it resides."
 
-## Failure scenarios
+## Failure Scenarios
 
-### Electronic failures
+### Electronic Failures
 
 * Exfiltration of critically sensitive data (e.g. private keys)
   * A Quarantined Computer leaks critically sensitive data over a
@@ -52,10 +50,10 @@ e.g. a  [USB JTAG exploit](http://www.itnews.com.au/news/intel-debugger-interfac
     * Visual side channel (does not require malware on the quarantined computer, since sensitive data is displayed on the screen as part of the protocol).
     If the protocol is followed, the attack surface here should be narrow, as users are instructed to block all visual side channels. However, at a minimum, they are using their smartphone for reading QR codes, and that has a camera on it.
     * Acoustic side channel, if inadequately blocked (i.e. insufficient sound blockage or masking noise). [See example](https://www.wired.com/2016/06/clever-attack-uses-sound-computers-fan-steal-data/).
-    * Radio side channel ( [example 1](https://www.usenix.org/legacy/event/sec09/tech/full_papers/vuagnoux.pdf) , [example 2](http://cyber.bgu.ac.il/content/how-leak-sensitive-data-isolated-computer-air-gap-near-mobile-phone-airhopper) , [example 3](https://www.wired.com/2015/06/radio-bug-can-steal-laptop-crypto-keys-fits-inside-pita/) )
-    * Seismic side channel ( [example](https://www.cc.gatech.edu/fac/traynor/papers/traynor-ccs11.pdf))
-    * Thermal side channel ( [example](http://cyber.bgu.ac.il/blog/bitwhisper-heat-air-gap))
-    * Magnetic side channel ( [example](http://fc15.ifca.ai/preproceedings/paper_14.pdf) )
+    * Radio side channel ([example 1](https://www.usenix.org/legacy/event/sec09/tech/full_papers/vuagnoux.pdf) , [example 2](http://cyber.bgu.ac.il/content/how-leak-sensitive-data-isolated-computer-air-gap-near-mobile-phone-airhopper) , [example 3](https://www.wired.com/2015/06/radio-bug-can-steal-laptop-crypto-keys-fits-inside-pita/))
+    * Seismic side channel ([example](https://www.cc.gatech.edu/fac/traynor/papers/traynor-ccs11.pdf))
+    * Thermal side channel ([example](http://cyber.bgu.ac.il/blog/bitwhisper-heat-air-gap))
+    * Magnetic side channel ([example](http://fc15.ifca.ai/preproceedings/paper_14.pdf))
   * Malware on a Quarantined Computer exfiltrates critically sensitive data via QR codes AND cooperating malware on the QR reading device steals the data.
   The risk of this scenario is negligible; unless the attacker simultaneously compromised every major smartphone QR reader with cooperating malware, any manipulation of QR codes would be quickly detected by people using non-compromised QR reader software, leading to widespread awareness and isolation of the threat. This makes it a very unattractive attack vector.
   * Critically sensitive data is leaked (intentionally or otherwise) as part of the payload of valid data (e.g. if the nonce used for a transaction signature contains bits of the private key)
@@ -64,14 +62,14 @@ e.g. a  [USB JTAG exploit](http://www.itnews.com.au/news/intel-debugger-interfac
   * Private key creation is compromised to make keys easily guessable
   * Transaction creation is compromised to use output addresses belonging to an attacker, AND cooperating malware on a networked computer sends the malicious transaction before the manual address verification is done)
 
-### Physical failures
+### Physical Failures
 
 * Two paper keys are stolen by an attacker
 * All (or all but one) paper keys are lost or destroyed
 * An attacker with physical line-of-sight to the laptop takes a photo of the screen while sensitive data is displayed
 * Malware on the quarantined machines writes sensitive data to persistent media (USB or laptop hard drive) AND the hardware is physically stolen afterward
 
-### Glacier protocol failures
+### Glacier Protocol Failures
 * Glacier hosting (i.e. DNS, Github, website hosting, etc.) is compromised
 to inject weaknesses into the protocol documentation or GlacierScript
 * Protocol delivery is compromised (e.g. with

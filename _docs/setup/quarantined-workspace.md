@@ -1,7 +1,5 @@
 ---
-title: Prepare quarantined workspaces
-description: Learn how to prepare your quarantined hardware for Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+title: Prepare Quarantined Workspaces
 ---
 
 This section is meant to be done immediately before executing the Deposit or
@@ -72,6 +70,7 @@ first time and do **not** plan on executing the Deposit or Withdrawal protocol n
             $ gpg --import jon@atack.com
             $ gpg --verify SHA256SUMS.asc
             ```
+            
         
         2. The output will include a lot of text, but ensure you see this:
             ```

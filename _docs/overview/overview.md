@@ -1,8 +1,5 @@
 ---
-title: Protocol overview
-description: Learn the basic concepts used in Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
-redirect_from: /docs/before-you-start/
+title: Protocol Overview
 ---
 
 This section

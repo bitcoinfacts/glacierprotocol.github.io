@@ -1,7 +1,5 @@
 ---
-title: Prepare quarantined hardware
-description: Learn how to prepare your quarantined hardware for Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+title: Prepare Quarantined Hardware
 ---
 
 1. Separate your quarantined hardware into two parallel sets. Each set should contain:

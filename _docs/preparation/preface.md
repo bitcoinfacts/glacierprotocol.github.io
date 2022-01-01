@@ -1,13 +1,13 @@
 ---
-title: Protocol structure
-description: This page explains the overall structure of Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+title: Protocol Preface
 ---
+
+## Protocol Structure
 
 The overall Glacier protocol consists of several distinct subprotocols:
 
-* **Setup**: Prepares hardware,
-and downloads and verifies needed software & documentation.
+* **Setup**: Prepares hardware, and downloads and verifies needed
+software & documentation.
 * **Deposit**: For securely storing bitcoins.
 * **Withdrawal**: For transferring some or all of your stored funds to another
 bitcoin address.

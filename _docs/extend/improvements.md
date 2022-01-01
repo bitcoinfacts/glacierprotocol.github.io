@@ -1,9 +1,6 @@
 ---
-title: Possible improvements to Glacier
-description: Here's a list of improvements that can be made to Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+title: Possible Improvements to Glacier
 ---
-
 
 ## Don't store electronic copy of Cold Storage Information Page
 Glacier recommends stores an electronic copy of the Cold Storage

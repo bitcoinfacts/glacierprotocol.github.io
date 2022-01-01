@@ -1,8 +1,5 @@
 ---
-title: Multi-signature security
-description: Glacier uses multiple keys to protect your Bitcoins. This makes it
-  harder for someone to steal your Bitcoins, and allows you to still access them
-  even if you lose one keys.
+title: Multisignature Security
 ---
 
 Central to our security protocols is

@@ -1,5 +1,5 @@
 ---
-title: Transaction execution and verification
+title: Transaction Execution & Verification
 description: Learn how to withdraw Bitcoin using Glacier, the step-by-step
   protocol for storing bitcoins in a highly secure way
 ---

@@ -1,7 +1,6 @@
 ---
 title: Acknowledgments
-description: These are the contributors to Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+description: These are the contributors to Glacier
 ---
 
 The following individuals have offered feedback or other contributions that

@@ -1,7 +1,5 @@
 ---
 title: Preparation
-description: Learn how to set up to withdrawal Bitcoin using Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
 redirect_from: /docs/withdrawal/
 ---
 

@@ -1,7 +1,5 @@
 ---
-title: Key concepts
-description: Overview of some of the key concepts leveraged by Glacier to make
-  sure your Bitcoin keys are kept safe.
+title: Key Concepts
 ---
 
 ## Private Key

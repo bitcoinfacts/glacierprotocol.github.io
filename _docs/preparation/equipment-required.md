@@ -1,12 +1,10 @@
 ---
-title: Hardware required
-description: Learn what hardware you need to acquire for using Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+title: Equipment Required
 ---
 
 Glacier has been written and tested around these specific equipment recommendations.
 
-### Eternally quarantined hardware: Set 1
+### Eternally Quarantined Hardware: Set 1
 
 * Factory-sealed computer with 2 USB ports and a camera:
 [2016 Dell Inspiron 11.6"](http://a.co/1E6HEQA)
@@ -19,7 +17,7 @@ to malware infection of its firmware.
 
 We'll use the camera for reading QR codes.
 
-### Eternally quarantined hardware: Set 2
+### Eternally Quarantined Hardware: Set 2
 
 * Factory-sealed computer from a different manufacturer, also with 2 USB ports
 and a camera:
@@ -29,7 +27,7 @@ manufacturer than the drives for Set 1:
 [Verbatim 2GB](http://a.co/jdzEf8O)
 
 
-### Used/existing computing equipment
+### Used/Existing Computing Equipment
 
 * Two computers with Internet connectivity, administrator access, at least 4GB RAM, and about
 2GB of free disk space.  **Each computer must be running Windows 10, macOS, or

@@ -1,7 +1,5 @@
 ---
-title: Store cold storage data
-description: Learn how to store cold storage data with Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+title: Store Cold Storage Data
 ---
 
 1. Shut down any nearby computers or smartphones, or other devices with cameras.
@@ -13,7 +11,7 @@ description: Learn how to store cold storage data with Glacier, the
     3. Use tamper-resistant seals in addition to the envelope's normal adhesive
     to seal it.
     4. **Immediately** put all
-    <span class="warning">Cold Storage Information Packets</span> in the safest
+    <span class="danger">Cold Storage Information Packets</span> in the safest
     possible location in your home or office that is immediately accessible.
     5. No, really. Like right now. That's basically a huge pile of cash you
     have just sitting there in envelopes on your desk.

@@ -1,7 +1,5 @@
 ---
-title: Ecosystem improvements
-description: Here's a list of how the Bitcoin ecosystem could be improved with
-  increased security.
+title: Ecosystem Improvements
 ---
 
 The Glacier protocol is lengthy and complex because the tools for high-security cold storage do not exist. This appendix briefly outlines some of the tool functionality that would address this gap. For additional technical details, see the Glacier [design document](../design-doc/overview.md).

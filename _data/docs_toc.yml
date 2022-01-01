@@ -1,15 +1,22 @@
-- title: Glacier overview
+- title: Introduction
   docs:
-  - overview
-  - overview/key-concepts
-  - overview/multi-signature-security
-  - overview/attack-surface
-- title: Before you start
+  - introduction/introduction
+  - introduction/trusting-this-protocol
+- title: Background
   docs:
-  - before-you-start/overview
-  - before-you-start/hardware
-  - before-you-start/structure
-- title: Setup
+  - background/self-vs-online
+  - background/hardware-wallets
+  - background/key-concepts
+  - background/multisignature
+  - background/attack-surface
+- title: Protocol Overview
+  docs:
+  - overview/overview
+- title: Protocol Preparation
+  docs:
+  - preparation/equipment-required
+  - preparation/preface
+- title: Setup Protocol
   docs:
   - setup/verify
   - setup/non-quarantined-hardware
@@ -17,22 +24,24 @@
   - setup/create-boot-usb
   - setup/create-app-usb
   - setup/quarantined-workspace
-- title: Deposit
+- title: Deposit Protocol
   docs:
   - deposit/generate-cold-storage-data
   - deposit/transfer-to-paper
   - deposit/test-deposit-withdrawal
   - deposit/deposit-execution
   - deposit/store-data
-- title: Withdrawal
+- title: Withdrawal Protocol
   docs:
   - withdrawal/preparation
   - withdrawal/transaction-construction
   - withdrawal/execution
-- title: Balance and maintenance
+- title: Viewing Protocol
   docs:
-  - check-balance/overview
-  - check-balance/maintenance
+  - viewing/viewing
+- title: Maintenance Protocol
+  docs:
+  - maintenance/maintenance
 - title: Extend Glacier
   docs:
   - extend/security
@@ -42,6 +51,6 @@
   docs:
   - contribute/license
   - contribute/acknowledgments
-- title: Design documents
+- title: Design Documents
   docs:
   - design-doc/overview

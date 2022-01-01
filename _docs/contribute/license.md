@@ -1,7 +1,6 @@
 ---
 title: License
-description: Learn more about the license for Glacer, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+description: Learn more about the license for Glacier
 redirect_from: /docs/contribute/
 ---
 

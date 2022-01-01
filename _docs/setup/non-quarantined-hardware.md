@@ -1,7 +1,5 @@
 ---
-title: Prepare non-quarantined hardware
-description: Learn how to set up your non-quarantined hardware for Glacier, the
-  step-by-step protocol for storing bitcoins in a highly secure way
+title: Prepare Non-Quarantined Hardware
 ---
 
 1. Select two (2) computers which will be used as "Setup Computers" to set up USB
