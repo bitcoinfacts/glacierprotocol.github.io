@@ -6,7 +6,7 @@ The Viewing Protocol is a simple procedure for viewing your balance of funds
 currently in one cold storage address.
 
 1. Open your electronic copy of the
-<span class="warning">Cold Storage Information Page</span> (see [Section II](/docs/deposit/transfer-to-paper/) of the Deposit Protocol for details). If you've lost access to it, you'll need to recreate a new
+<span class="warning">Cold Storage Information Page</span> (see [Section II](../../deposit/transfer-to-paper/) of the Deposit Protocol for details). If you've lost access to it, you'll need to recreate a new
 electronic copy by transcribing one of the hardcopies (stored with each private
 key) by hand.
 2. Go to [Blockstream](https://blockstream.info/), paste your

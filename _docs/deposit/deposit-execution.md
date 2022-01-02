@@ -22,7 +22,7 @@ Privacy Considerations subsection for details.)
     your cold storage address.
     2. Open your electronic copy of the
     <span class="warning">Cold Storage Information Page</span>
-    (see [Section II](/docs/deposit/transfer-to-paper/) of the Deposit Protocol for details).
+    (see [Section II](../../deposit/transfer-to-paper/) of the Deposit Protocol for details).
     If you've lost access to it, you'll need to recreate a new electronic
     copy by transcribing one of the hardcopies (attached to each public key)
     by hand.

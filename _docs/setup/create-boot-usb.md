@@ -13,11 +13,11 @@ directly from the USB drive, without using the computer's hard drive in any
 way.)
 
 The *first two* USB drives ("Setup Boot USBs") are the USB drives you labeled
-"SETUP 1 BOOT" and "SETUP 2 BOOT" in the [Setup Protocol](/docs/setup/quarantined-hardware/). They will be prepared using
+"SETUP 1 BOOT" and "SETUP 2 BOOT" in the [Setup Protocol](../../setup/quarantined-hardware/). They will be prepared using
 your Setup Computers, which may be running Windows, macOS, or something else.
 
 The *last two* USB drives ("Quarantined Boot USBs") are the USB drives you
-labeled "Q1 BOOT" and "Q2 BOOT" in the [Setup Protocol](/docs/setup/quarantined-hardware/). They will be prepared using your
+labeled "Q1 BOOT" and "Q2 BOOT" in the [Setup Protocol](../../setup/quarantined-hardware/). They will be prepared using your
 Setup Computers *while booted off* a *Setup Boot USB*.
 
 Technical details: The Non-Quarantined OS USBs serve two purposes:
@@ -78,7 +78,7 @@ copy there.
         characters, last 8 characters, and a few somewhere in the middle.**
 
         Technical details: Because you verified the checksum & checksum
-        signature for this document in [Section I](/docs/setup/verify/) of the Setup Protocol, we are omitting the GPG
+        signature for this document in [Section I](../../setup/verify/) of the Setup Protocol, we are omitting the GPG
         verification of some other fingerprints in the protocol. For a detailed
         security analysis, see the design document.
 

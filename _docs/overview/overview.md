@@ -138,10 +138,6 @@ However, this will cost you fees, and importantly, it requires you trust the
 operator of the exchange service not to steal or lose your
 funds.
 
-[This guide](https://bitcoinnewsmagazine.com/how-to-use-monero-to-anonymize-bitcoin/)
-gives additional detail about how to increase Bitcoin anonymity using Monero &
-Tor.
-
 ## Lower-security Protocol Variants
 
 If you are willing to accept lower security for lower cost, you can do so with only slight modifications:
@@ -181,4 +177,4 @@ well-resourced criminal organization) are beyond its scope.
 
 For some
 additional security precautions beyond those provided in the standard
-protocol, see the [possible improvements to Glacier](/docs/extend/improvements/).
+protocol, see the [possible improvements to Glacier](../../extend/improvements/).

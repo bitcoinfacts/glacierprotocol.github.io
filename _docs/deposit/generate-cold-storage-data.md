@@ -5,7 +5,7 @@ redirect_from: /docs/deposit/
 
 The Deposit Protocol is used to transfer bitcoins into high-security cold storage. If you have previously used the
 Deposit Protocol to deposit funds into cold storage, and want to deposit
-additional funds to the same cold storage address, skip to [Section IV](/docs/deposit/deposit-execution/) of the Deposit Protocol.
+additional funds to the same cold storage address, skip to [Section IV](../../deposit/deposit-execution/) of the Deposit Protocol.
 
 By the end of this section, you will generate the following information.
 
@@ -33,7 +33,7 @@ Protocol unless explicitly instructed otherwise.</span>**
     there are any new versions of Glacier recommended.
     4. Whether or not you decide to upgrade, review the errata for the version
     of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
-2. Execute [Section VI of the Setup Protocol](/docs/setup/quarantined-workspace/) to
+2. Execute [Section VI of the Setup Protocol](../../setup/quarantined-workspace/) to
 prepare your quarantined workspace.
 3. Create entropy for private keys
 

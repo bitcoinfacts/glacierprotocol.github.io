@@ -4,10 +4,10 @@ title: Create App USBs
 
 We will prepare two (2) "Quarantined App USB"
 drives with the software needed to execute the remainder of the protocol.
-These are the USB drives you labeled "Q1 APP" and "Q2 APP" in [Section III](/docs/setup/quarantined-hardware/) of the Setup Protocol.
+These are the USB drives you labeled "Q1 APP" and "Q2 APP" in [Section III](../../setup/quarantined-hardware/) of the Setup Protocol.
 
 1. Boot the SETUP 1 computer off the SETUP 1 BOOT USB if it is not
-already. (See the instructions in [Section IV](/docs/setup/create-boot-usb/) of the Setup Protocol for details.)
+already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of the Setup Protocol for details.)
 2. Insert the Q1 APP USB into the the SETUP 1 computer.
 
     1. **The instruction to plug a Quarantined App USB into your Setup computer

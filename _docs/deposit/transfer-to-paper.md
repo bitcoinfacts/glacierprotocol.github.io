@@ -2,7 +2,7 @@
 title: Transfer Cold Storage Data To Paper
 ---
 
-In this section, you'll move the cold storage data you generated in [Section I](/docs/deposit/generate-cold-storage-data/) of the Deposit Protocol from the quarantined computing environments onto physical paper. This will be
+In this section, you'll move the cold storage data you generated in [Section I](../../deposit/generate-cold-storage-data/) of the Deposit Protocol from the quarantined computing environments onto physical paper. This will be
 done using a combination hand transcription and
 [QR codes](https://en.wikipedia.org/wiki/QR_code).
 

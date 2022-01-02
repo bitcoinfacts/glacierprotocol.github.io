@@ -6,7 +6,7 @@ In this section, we construct a "signed transaction" in our quarantined
 environments, verify it, and then use QR codes to extract it from the
 quarantined environments (for execution in the following section).
 
-1. Execute [Section VI of the Setup Protocol](/docs/setup/quarantined-workspace/)
+1. Execute [Section VI of the Setup Protocol](../../setup/quarantined-workspace/)
 to prepare your quarantined workspace.
 2. Construct the withdrawal transaction.
 
@@ -19,7 +19,7 @@ to prepare your quarantined workspace.
             ```
             A window will appear with your laptop's video feed.
 
-        2. For each QR code you printed out in [Section I](/docs/withdrawal/preparation/) of the Withdrawal Protocol:
+        2. For each QR code you printed out in [Section I](../../withdrawal/preparation/) of the Withdrawal Protocol:
             1. Hold the QR code up to the webcam.
             2. When a green square appears around the QR code on the video
             feed, it has been successfully read.
