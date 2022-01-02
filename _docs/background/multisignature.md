@@ -123,7 +123,7 @@ redemption script (since losing all redemption scripts is just as bad as losing
 all keys). Redemption scripts, however, allow one to view funds. An alternate
 version of this protocol could be created using a different multisig approach
 besides P2SH transactions, which would eliminate the ability of signatories to
-view balances; see Appendix C for details.
+view balances; see [Extend Glacier - Section II](../../extend/improvements/) for details.
 * **Signatory collusion**: Although possessing one key won't allow a signatory
 to access your funds, two signatories might collude with each other to steal
 your money.

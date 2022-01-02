@@ -1,6 +1,5 @@
 ---
 title: Extend Glacier Security
-redirect_from: /docs/extend/
 ---
 
 Glacier is designed to provide strong protection for almost everyone -- even
@@ -9,7 +8,7 @@ those storing many millions of dollars.
 However, it is not designed to provide adequate protection for truly
 exceptional circumstances, such as a targeted attack/surveillance effort
 (electronic or physical) by a well-resourced criminal organization. This
-appendix briefly outlines additional measures one might consider if further
+section briefly outlines additional measures one might consider if further
 security were needed above and beyond those in the formal Glacier protocol.
 
 We do not recommend considering these measures unless you feel you have a

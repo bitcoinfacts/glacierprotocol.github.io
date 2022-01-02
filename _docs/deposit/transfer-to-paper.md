@@ -144,7 +144,7 @@ when they absolutely need to be.
         critically sensitive data in a moment.)
 9. Prepare <span class="danger">Cold Storage Information Packets</span>
     1. Put each <span class="danger">handwritten private key page</span> along
-    with one Cold <span class="warning">Storage Information Page</span> in its own
+    with one <span class="warning">Cold Storage Information Page</span> in its own
     opaque envelope. While this obviously won't deter a determined
     thief, it makes it quite difficult for a thief to steal a key without leaving
     evidence they have done so -- and noticing theft of a single key gives you a
