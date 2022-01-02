@@ -29,7 +29,7 @@ On any Internet-connected computer:
     of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
 2. Open your electronic copy of the
 <span class="warning">Cold Storage Information Page</span>
-(see Section II of the Deposit Protocol for details).
+(see [Section II](/docs/deposit/transfer-to-paper/) of the Deposit Protocol for details).
 3. Identify the blockchain transactions associated with the funds you'd like
 to withdraw.  
     1. If you have you have your own Bitcoin node, such as [Umbrel](https://getumbrel.com/):  

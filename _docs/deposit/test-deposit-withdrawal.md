@@ -11,8 +11,7 @@ handling any critically sensitive cold storage data, so you can use any
 Internet-connected computer for this section.
 
 1. Open your electronic copy of the
-<span class="warning">Cold Storage Information Page</span> (see Section II for
-details).
+<span class="warning">Cold Storage Information Page</span> (see [Section II](/docs/deposit/transfer-to-paper/) of the Deposit Protocol for details).
 2. Perform a test deposit.
     1. Use the wallet software or service of your choice to send the approximate
     equivalent to fund 1000 bytes of transactions to your

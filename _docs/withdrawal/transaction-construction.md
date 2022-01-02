@@ -19,7 +19,7 @@ to prepare your quarantined workspace.
             ```
             A window will appear with your laptop's video feed.
 
-        2. For each QR code you printed out in Section I:
+        2. For each QR code you printed out in [Section I](/docs/withdrawal/preparation/) of the Withdrawal Protocol:
             1. Hold the QR code up to the webcam.
             2. When a green square appears around the QR code on the video
             feed, it has been successfully read.

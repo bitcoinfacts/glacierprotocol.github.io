@@ -5,7 +5,7 @@ redirect_from: /docs/deposit/
 
 The Deposit Protocol is used to transfer bitcoins into high-security cold storage. If you have previously used the
 Deposit Protocol to deposit funds into cold storage, and want to deposit
-additional funds to the same cold storage address, skip to Section IV.
+additional funds to the same cold storage address, skip to [Section IV](/docs/deposit/deposit-execution/) of the Deposit Protocol.
 
 By the end of this section, you will generate the following information.
 
