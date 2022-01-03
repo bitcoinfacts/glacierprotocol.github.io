@@ -21,8 +21,8 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
 
     1. Download the latest full release of Glacier (*not* just the protocol
     document) at
-    [https://github.com/bitcoinfacts/GlacierProtocol/releases](https://github.com/bitcoinfacts/GlacierProtocol/releases).
-    1. Unpack the Glacier ZIP file into a staging area.
+    [https://github.com/bitcoinfacts/GlacierProtocol/releases/latest](https://github.com/bitcoinfacts/GlacierProtocol/releases/latest).
+    1. Unpack the Glacier ZIP file into a staging area:
 
         1. When the download starts, Firefox will ask you if you want to open the
         ZIP file with Archive Manager. Click OK.
@@ -42,7 +42,7 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
         "glacier".
 
     1. Obtain the Glacier "public key," used to cryptographically verify the
-    Glacier document and GlacierScript.
+    Glacier document and GlacierScript:
 
         **If you are ever using Glacier in the future and notice that this step
         has changed (or that this warning has been removed), there is a
@@ -54,7 +54,7 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
         1. Right-click the link and select "Save Link As..."
         1. Name the file "glacier.asc".
 
-    1. Verify the integrity of the Glacier download.
+    1. Verify the integrity of the Glacier download:
 
         1. Import the Glacier public key into your local GPG installation:
            ```
@@ -95,7 +95,7 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
            README.md: OK
            ```
 
-    1. Copy the glacier folder to the <span class="qapp">Q1 APP</span> USB.
+    1. Copy the "glacier" folder to the <span class="qapp">Q1 APP</span> USB:
         1. Click on the File Manager icon in the launching dock along the left
         side of the screen.
         1. Find the "glacier" folder under "Home".
@@ -115,9 +115,9 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
             1. Login again with user "ubuntu" and leave the password blank.
 
 1. Open the Glacier Protocol document so that it is available for copy-pasting terminal commands.
-1. Install the remaining application software on the <span class="qapp">Q1 APP</span> USB.
-    1. Configure our system to enable access to the software we need in Ubuntu's
-    "package repository".
+1. Install the remaining application software on the <span class="qapp">Q1 APP</span> USB:
+    1. Configure the system to enable access to the software we need in Ubuntu's
+    "package repository":
         1. ```
         $ sudo apt-add-repository universe
         ```

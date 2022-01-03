@@ -34,7 +34,7 @@ first have to propagate itself to the Non-Quarantined OS USB).
 1. Perform the following steps on your SETUP 1 computer.
 1. If you are not already reading this document on the SETUP 1 computer, open a
 copy there.
-1. Open a terminal window.
+1. Open a terminal window:
 {% if site.platform != "linuxOnly" %}
     1. **Windows**: Press Windows-R, type "powershell" and click OK.
     1. **macOS**: Click the Searchlight (magnifying glass) icon in the menu bar,
@@ -85,7 +85,7 @@ copy there.
         [here](http://releases.ubuntu.com/21.10/SHA256SUMS),
         or follow Ubuntu's full verification process using this guide.
 
-1. Create the <span class="setupboot">SETUP 1 BOOT</span>.
+1. Create the <span class="setupboot">SETUP 1 BOOT</span> USB:
 {% if site.platform != "linuxOnly" %}
     1. **Windows**
         1. Download the
@@ -106,7 +106,7 @@ copy there.
         1.  The program will take a few minutes to write the USB.
 
     1. **macOS**
-        1. Prepare the Ubuntu download for copying to the USB.
+        1. Prepare the Ubuntu download for copying to the USB:
             ```
             $ cd $HOME/Downloads
             $ hdiutil convert ubuntu-21.10-desktop-amd64.iso -format UDRW -o ubuntu-21.10-desktop-amd64.img
@@ -126,7 +126,7 @@ copy there.
                 that comes before (external, physical) (for example /dev/disk2).
 
         1. Put Ubuntu on the <span class="setupboot">SETUP 1 BOOT</span> USB:
-            1. First, unmount the usb
+            1. First, unmount the USB:
                <pre>
                $ diskutil unmountDisk <span class="primary">USB-device-identifier-here</span>
                </pre>
@@ -149,7 +149,7 @@ copy there.
             1. Click Ignore.
 
         1. Verify the integrity of the <span class="setupboot">SETUP 1 BOOT</span> USB (i.e. no errors or
-        malware infection).
+        malware infection):
             1. Remove the USB drive from the USB slot and immediately reinsert it.
             1. Wait 10 seconds for the operating system to recognize the USB.
             1. You may see the same error box pop up again. Select Ignore.
@@ -214,11 +214,11 @@ copy there.
             re-inserting the USB before integrity checking is a simple workaround to
             defend against this.
             1. Wait 10 seconds for the operating system to recognize the USB.
-            1.  
+            1. Navigate to the Downloads directory: 
                 ```
                 $ cd $HOME/Downloads
                 ```
-            1.  
+            1. Verify the integrity of the USB:
                 <pre>
                 $ sudo cmp -n `stat -c '%s' ubuntu-21.10-desktop-amd64.iso`
                 ubuntu-21.10-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
@@ -258,7 +258,9 @@ copy there.
                 $ sudo umount /dev/sda1
                 ```
 
-            1. Type the following dd command to create a bootable USB image from the .iso file, replacing `/dev/sda` with the equivalent path on your system:
+            1. Type the following dd command to create a bootable USB image from the .iso file, replacing `/dev/sda` with the equivalent device identifier on your system. **Make sure to use the correct
+            device identifier; <span style="color: red;">using the wrong one could overwrite your hard
+            drive!</span>**
                 ```
                 $ sudo dd if=ubuntu-21.10-desktop-amd64.iso of=/dev/sda bs=1M
                 ```
@@ -273,11 +275,11 @@ copy there.
             re-inserting the USB before integrity checking is a simple workaround to
             defend against this.
             1. Wait 10 seconds for the operating system to recognize the USB.
-            1.  
+            1. Navigate to the Downloads directory:
                 ```
                 $ cd $HOME/Downloads
                 ```
-            1.  
+            1. Verify the integrity of the USB:
                 <pre>
                 $ sudo cmp -n `stat -c '%s' ubuntu-21.10-desktop-amd64.iso`
                 ubuntu-21.10-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
@@ -295,7 +297,7 @@ copy there.
                 persists, try using a different USB drive or a different Setup
                 Computer.
 
-1. Create the <span class="qboot">Q1 BOOT</span>
+1. Create the <span class="qboot">Q1 BOOT</span> USB:
     1. Boot the SETUP 1 computer from the <span class="setupboot">SETUP 1 BOOT</span> USB.
         1. Reboot the computer.
         1. Press your laptop's key sequence to bring up the boot device
@@ -380,4 +382,4 @@ copy there.
         1. **The <span class="qboot">Q1 BOOT</span> USB is now eternally quarantined. It should never again
         be plugged into anything besides the Q1 computer.**
 1. Create the <span class="setupboot">SETUP 2 BOOT</span> USB and <span class="qboot">Q2 BOOT</span> USB
-    1. Repeat steps 1-8 using the SETUP 2 computer, <span class="setupboot">SETUP 2 BOOT</span> USB, and <span class="qboot">Q2 BOOT</span>.
+    1. Repeat steps 1-8 using the SETUP 2 computer, <span class="setupboot">SETUP 2 BOOT</span> USB, and <span class="qboot">Q2 BOOT</span> USB.
