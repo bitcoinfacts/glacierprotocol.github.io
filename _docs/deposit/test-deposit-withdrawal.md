@@ -12,7 +12,7 @@ Internet-connected computer for this section.
 
 1. Open your electronic copy of the
 <span class="warning">Cold Storage Information Page</span> (see [Section II](../../deposit/transfer-to-paper/) of the Deposit Protocol for details).
-2. Perform a test deposit.
+1. Perform a test deposit.
     1. Use the wallet software or service of your choice to send the approximate
     equivalent to fund 1000 bytes of transactions to your
     <span class="warning">cold storage address</span>.
@@ -25,13 +25,13 @@ Internet-connected computer for this section.
         1. Copy-paste your <span class="warning">cold storage address</span>
         from the <span class="warning">Cold Storage Information Page</span>
         into the wallet software.
-    2. Wait for the Bitcoin network to confirm the transaction at least once.
+    1. Wait for the Bitcoin network to confirm the transaction at least once.
     The way you tell whether a transaction has been confirmed varies depending
     on the software or service you are using to send funds, but it should be
     displayed prominently.
-3. Perform a test withdrawal.
+1. Perform a test withdrawal.
     1. Execute the [Withdrawal Protocol](../../withdrawal/execution/) to withdraw
     the remaining balance ($6 USD - deposit fees) from cold storage to a regular
     Bitcoin address of your choice.
-    2. Wait for the Bitcoin network to confirm the transaction at least once.
+    1. Wait for the Bitcoin network to confirm the transaction at least once.
     (Instructions for doing this are in the Withdrawal protocol.)

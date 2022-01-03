@@ -154,7 +154,7 @@ stack (and needing the second setup computer) and skip the process of
 re-generating and verifying keys & transactions on the parallel hardware
 stack.
 
-2. **Use existing hardware**. An even lower-security variant is to use nothing
+1. **Use existing hardware**. An even lower-security variant is to use nothing
 but existing laptops you already possess, disabling all network
 connections during protocol execution, instead of purchasing new
 quarantined hardware. This fails to protect against some malware

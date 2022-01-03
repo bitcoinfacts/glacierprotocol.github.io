@@ -21,17 +21,17 @@ which self-managed storage does not have:
 1. **Identity spoofing**: Your account on the service could be hacked (including
 through methods such as identity theft, where someone convinces the service they
 are you).
-2. **Network exposure**: Online services still need to transmit security-critical
+1. **Network exposure**: Online services still need to transmit security-critical
 information over the Internet, which creates an opportunity for that information
 to be stolen. In contrast, self-managed storage can be done with no network
 exposure.
-3. **Under constant attack**: Online services can be hacked by attackers from
+1. **Under constant attack**: Online services can be hacked by attackers from
 anywhere in the world. People know these services store lots of funds, which
 makes them much larger targets. If there's a flaw in their security, it's more
 likely to be found and exploited.
-4. **Internal theft**: They have to protect against internal theft from a large
+1. **Internal theft**: They have to protect against internal theft from a large
 group of employees & contractors.
-5. **Intentional seizure**: They have the ability (whether of their own volition,
+1. **Intentional seizure**: They have the ability (whether of their own volition,
 or under pressure from governments) to seize your funds.
 There is historical precedent for this, even if funds are not suspected of
 criminal involvement. In 2010,

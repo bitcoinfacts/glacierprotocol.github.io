@@ -32,9 +32,9 @@ Protocol unless explicitly instructed otherwise.</span>**
     there are any new versions of Glacier recommended.
     1. Whether or not you decide to upgrade, review the errata for the version
     of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
-2. Execute [Section VI of the Setup Protocol](../../setup/quarantined-workspace/) to
+1. Execute [Section VI of the Setup Protocol](../../setup/quarantined-workspace/) to
 prepare your quarantined workspace.
-3. Create entropy for private keys
+1. Create entropy for private keys
 
     Creating an unguessable private key requires
     *entropy* -- random data. We'll combine two sources of entropy to generate
@@ -43,10 +43,10 @@ prepare your quarantined workspace.
 
     1. Generate dice entropy
         1. Type "DICE ENTROPY" into both Quarantined Scratchpads.
-        2. Roll 62 six-sided dice, shaking the dice thoroughly each roll.
+        1. Roll 62 six-sided dice, shaking the dice thoroughly each roll.
         62 dice rolls corresponds to 160 bits of entropy. See the
         [design document](../design-doc/overview.md) for details.
-        3. If you are rolling multiple dice at the same time, read the
+        1. If you are rolling multiple dice at the same time, read the
         dice left-to-right. **This is important.** Humans are
         [horrible at generating random data](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0041531)
         and great at noticing patterns. Without a consistent heuristic like
@@ -54,7 +54,7 @@ prepare your quarantined workspace.
         non-random order (like tending to record lower numbers first).
         This can drastically undermine the randomness of the data, and could be
         exploited to guess your private keys.
-        4. Manually enter the <span class="danger">numbers</span> into the
+        1. Manually enter the <span class="danger">numbers</span> into the
         Quarantined Scratchpads on *both* quarantined computers. Put all rolls on
         the same line to create
         <span class="danger">one line of 62 numbers</span>. (It's fine to add
@@ -63,15 +63,15 @@ prepare your quarantined workspace.
        Repeat this process a total of *N* times, so that you have a total of <span
        class="danger">*N* lines of numbers</span> in each Quarantined Scratchpad.
 
-    2. Generate computer entropy    
+    1. Generate computer entropy    
         1. Type "COMPUTER ENTROPY" into both computers' Quarantined Scratchpads.
         (This is a descriptive heading to keep your notes organized and minimize
         risk of error.)
-        2. Make sure you are in the `~/glacier folder`:
+        1. Make sure you are in the `~/glacier folder`:
            ```
            $ cd ~/glacier
            ```
-        3. **On the Q1 computer** enter the following command. You'll need to supply
+        1. **On the Q1 computer** enter the following command. You'll need to supply
         the number of keys required for your multisignature withdrawal policy
         (4 by default).
            <pre>
@@ -88,13 +88,13 @@ prepare your quarantined workspace.
            Computer entropy #2: c36b 0f66 3344 cd74 1d03 c659 0e7a 92e7 5d1a 663b
            Computer entropy #3: 6873 b3a9 f1b6 5a06 064a 6e84 7faf f61c 1ef6 5407
            Computer entropy #4: 5668 abd2 a7d9 5eb8 f7db 211d fc82 0c15 d4e4 0a04</span></pre>
-        4. Copy-paste the <span class="danger">*N* lines of entropy</span> into the
+        1. Copy-paste the <span class="danger">*N* lines of entropy</span> into the
         Quarantined Scratchpad.
-        5. Manually enter the <span class="danger">*N* lines of entropy</span>
+        1. Manually enter the <span class="danger">*N* lines of entropy</span>
         into the Quarantined Scratchpad on the other quarantined computer.
 
 
-    3. Generate new cold storage data information using your entropy
+    1. Generate new cold storage data information using your entropy
 
        **On the Q1 computer:**
         1. Run GlacierScript to generate the private keys.
@@ -110,8 +110,8 @@ prepare your quarantined workspace.
            ```
            $ ./glacierscript.py create-deposit-data -m 2 -n 4 --p2wsh
            ```
-        2. GlacierScript will prompt you to enter *N* 62-number lines of dice entropy and *N* lines of computer entropy.
-        3. GlacierScript will output your cold storage data:
+        1. GlacierScript will prompt you to enter *N* 62-number lines of dice entropy and *N* lines of computer entropy.
+        1. GlacierScript will output your cold storage data:
             * *N* private keys
             * A cold storage address
             * A redemption script
@@ -133,13 +133,13 @@ prepare your quarantined workspace.
            QR code for cold storage address in address.png
            QR code for redemption script in redemption.png</pre>
 
-    4. Verify the integrity of the cold storage data.
+    1. Verify the integrity of the cold storage data.
         1. **On the Q2 computer**, repeat step (c) above.
-        2. Verify that the output of GlacierScript shown in the terminal
+        1. Verify that the output of GlacierScript shown in the terminal
         window is identical on both computers:
             1. <span class="danger">All private keys</span>
-            2. <span class="warning">Cold storage address</span>
-            3. <span class="warning">Redemption script</span>
+            1. <span class="warning">Cold storage address</span>
+            1. <span class="warning">Redemption script</span>
 
             **For the private keys and cold storage address, verify every
             character**. For the redemption script, it's sufficient to check
@@ -154,13 +154,13 @@ prepare your quarantined workspace.
             they will be caught during the test deposit & withdrawal process later in the
             protocol; a painstaking manual verification is not required.
 
-        3. **If there are any discrepancies, do not proceed.**
+        1. **If there are any discrepancies, do not proceed.**
             1. Check whether the entropy in both Quarantined Scratchpads matches
             precisely.
                 1. If they are different by 1-3 characters (presumably due to
                 transcription errors), manually tweak them to make them match.
                 It doesn't matter which scratchpad is tweaked.
-                2. If they are different by more than 3 characters, restart the
+                1. If they are different by more than 3 characters, restart the
                 Deposit Protocol.
-                3. If they are identical, restart the Deposit Protocol.
-            2. Seek assistance if discrepancies persist.
+                1. If they are identical, restart the Deposit Protocol.
+            1. Seek assistance if discrepancies persist.

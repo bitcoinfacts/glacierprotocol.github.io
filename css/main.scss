@@ -106,7 +106,7 @@ pre > code {
 }
 
 /* Highlight text as the original Glacier paper */
-span.danger, span.warning, span.primary {
+span.danger, span.warning, span.primary, span.setupboot, span.qboot, span.qapp {
   color: #eeeeee;
   padding: 2px;
   border-radius: 2px;
@@ -120,6 +120,16 @@ span.warning {
 span.primary {
   background-color: $brand-primary;
 }
+span.setupboot {
+  background-color: #3FB618;
+}
+span.qboot {
+  background-color: #9954BB;
+}
+span.qapp {
+  background-color: #FFBE0B;
+}
+
 
 /* Make ordered lists similar to the pdf version of Glacer */
 ol > li > ol > li > ol > li > ol > li > ol {

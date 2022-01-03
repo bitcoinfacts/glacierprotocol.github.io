@@ -24,7 +24,7 @@ initial deposit into cold storage, and **annually** thereafter.
 1. Execute the Viewing Protocol to view the balance of the
 <span class="warning">cold storage address</span> and ensure that it is as
 expected.
-2. Check for Glacier security upgrades
+1. Check for Glacier security upgrades
     1. Access the latest full release of Glacier (*not* just the protocol
     document) at
     [https://github.com/bitcoinfacts/GlacierProtocol/releases](https://github.com/bitcoinfacts/GlacierProtocol/releases).
@@ -36,14 +36,14 @@ expected.
     1. Whether or not you decide to upgrade, review the errata for the version
     of Glacier you are using at
     [https://github.com/bitcoinfacts/GlacierProtocol/releases](https://github.com/bitcoinfacts/GlacierProtocol/releases).
-3. Have each <span class="danger">Cold Storage Information Packet</span>
+1. Have each <span class="danger">Cold Storage Information Packet</span>
 visually inspected (either by you, or the signatory that has it in custody):
     1. Verify the packet is in its expected location.
-    2. Verify the packet's location is secured as expected (any locks in
+    1. Verify the packet's location is secured as expected (any locks in
     working order, etc.)
-    3. Verify the packet is in good physical condition.
-    4. Verify the tamper-resistant seals appear to be intact.
-4. Execute the Withdrawal Protocol for a small test amount.
-5. Create a reminder for yourself in one year to execute the Maintenance
+    1. Verify the packet is in good physical condition.
+    1. Verify the tamper-resistant seals appear to be intact.
+1. Execute the Withdrawal Protocol for a small test amount.
+1. Create a reminder for yourself in one year to execute the Maintenance
 Protocol again. (If you don't have a reminder system you trust, find one
 on the web.)

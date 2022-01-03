@@ -15,26 +15,26 @@ Privacy Considerations subsection for details.)
 
    If you do, make those intermediate transfers using whatever means you
    normally use to transfer bitcoins.
-2. If you are depositing a large amount, consider making a small deposit as a test followed by a second deposit for the remainder.
-3. Verify cold storage address.
+1. If you are depositing a large amount, consider making a small deposit as a test followed by a second deposit for the remainder.
+1. Verify cold storage address.
     1. Get one of the paper
     <span class="warning">Cold Storage Information Pages</span> containing
     your cold storage address.
-    2. Open your electronic copy of the
+    1. Open your electronic copy of the
     <span class="warning">Cold Storage Information Page</span>
     (see [Section II](../../deposit/transfer-to-paper/) of the Deposit Protocol for details).
     If you've lost access to it, you'll need to recreate a new electronic
     copy by transcribing one of the hardcopies (attached to each public key)
     by hand.
-    3. **<span style="color: red;">Visually verify that the
+    1. **<span style="color: red;">Visually verify that the
     <span class="warning">cold storage addresses</span> are identical in the
     electronic copy and paper copy.</span>**
     This is to insure that the electronic copy was not damaged, hacked,
     accidentally changed due to a typo, etc.
-    4. Return the paper
+    1. Return the paper
     <span class="warning">Cold Storage Information Page</span> to its
     normal secure storage.
-4. Perform the deposit.
+1. Perform the deposit.
     1. Use the wallet software or service of your choice to **prepare** to send the
     desired amount of funds to your
     <span class="warning">cold storage address</span>.
@@ -48,17 +48,17 @@ Privacy Considerations subsection for details.)
         from the <span class="warning">Cold Storage Information Page</span>
         into the wallet software.
 
-    2. **Double-check that the address you pasted matches the address in the Cold
+    1. **Double-check that the address you pasted matches the address in the Cold
     Storage Information Page. <span style="color: red;">If you use the wrong address, you will lose all
     of your funds with no recourse.</span>**
-    3. Execute the transaction.
-5. Verify the deposit on the public blockchain.
+    1. Execute the transaction.
+1. Verify the deposit on the public blockchain.
     1. Go to https://blockstream.info/, paste the address into the search bar, and press Enter.
     You'll be taken to a page that says "Address" at the top, with your
     <span class="warning">cold storage address</span> listed underneath.
-    2. Within a couple of seconds you should be able to refresh this page and see your
+    1. Within a couple of seconds you should be able to refresh this page and see your
     unconfirmed transaction at the top of the transaction list.
-    3. Periodically refresh the page until you see the funds reflected in "Confirmed Unspent".
+    1. Periodically refresh the page until you see the funds reflected in "Confirmed Unspent".
     This may take anywhere from several minutes to many hours depending upon the fee rate you
     paid and how many other transactions are currently waiting to be confirmed on the network.
 

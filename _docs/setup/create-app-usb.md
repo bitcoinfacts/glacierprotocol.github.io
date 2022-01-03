@@ -4,11 +4,11 @@ title: Create App USBs
 
 We will prepare two (2) "Quarantined App USB"
 drives with the software needed to execute the remainder of the protocol.
-These are the USB drives you labeled "Q1 APP" and "Q2 APP" in [Section III](../../setup/quarantined-hardware/) of the Setup Protocol.
+These are the USB drives you labeled <span class="qapp">Q1 APP</span> and <span class="qapp">Q2 APP</span> in [Section III](../../setup/quarantined-hardware/) of the Setup Protocol.
 
-1. Boot the SETUP 1 computer off the SETUP 1 BOOT USB if it is not
+1. Boot the SETUP 1 computer off the <span class="setupboot">SETUP 1 BOOT</span> USB if it is not
 already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of the Setup Protocol for details.)
-2. Insert the Q1 APP USB into the the SETUP 1 computer.
+1. Insert the <span class="qapp">Q1 APP</span> USB into the the SETUP 1 computer.
 
     1. **The instruction to plug a Quarantined App USB into your Setup computer
     *should* raise a red flag for you, because <span style="color: red;">you should never plug a quarantined
@@ -16,32 +16,32 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
 
        This setup process is the ONE exception.
 
-3. Press Ctrl-Alt-T to open a terminal window.
-4. Install the Glacier document and GlacierScript on the Q1 APP USB.
+1. Press Ctrl-Alt-T to open a terminal window.
+1. Install the Glacier document and GlacierScript on the <span class="qapp">Q1 APP</span> USB.
 
     1. Download the latest full release of Glacier (*not* just the protocol
     document) at
     [https://github.com/bitcoinfacts/GlacierProtocol/releases](https://github.com/bitcoinfacts/GlacierProtocol/releases).
-    2. Unpack the Glacier ZIP file into a staging area.
+    1. Unpack the Glacier ZIP file into a staging area.
 
         1. When the download starts, Firefox will ask you if you want to open the
         ZIP file with Archive Manager. Click OK.
 
            When the ZIP file download completes, it will be opened with Archive Manager.
 
-        2. There will be a single entry in a list named
+        1. There will be a single entry in a list named
         "GlacierProtocol-<span class="primary">version-here</span>", where
         <span class="primary">version-here</span> is replaced with
         the current version number (like "v1.0"). Click on that and then click
         the "Extract" button.
-        3. The Archive Manager will ask you where you want to extract the ZIP
+        1. The Archive Manager will ask you where you want to extract the ZIP
         file to. Select "Home" on the left panel and then press the extract button.
-        4. When the Archive Manager is finished extracting the ZIP archive it
+        1. When the Archive Manager is finished extracting the ZIP archive it
         will ask you what to do next. Click "Show the Files".
-        5. Rename the unzipped folder from "GlacierProtocol-<span class="primary">version-here</span>" to
+        1. Rename the unzipped folder from "GlacierProtocol-<span class="primary">version-here</span>" to
         "glacier".
 
-    3. Obtain the Glacier "public key," used to cryptographically verify the
+    1. Obtain the Glacier "public key," used to cryptographically verify the
     Glacier document and GlacierScript.
 
         **If you are ever using Glacier in the future and notice that this step
@@ -49,22 +49,22 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
         security risk.** Stop and seek assistance.
 
         1. Access bitcoinfacts's Keybase profile at <https://keybase.io/bitcoinfacts>.
-        2. Click the string of letters and numbers next to the key icon.
-        3. In the pop-up that appears, locate the link reading "this key".
-        4. Right-click the link and select "Save Link As..."
-        5. Name the file "glacier.asc".
+        1. Click the string of letters and numbers next to the key icon.
+        1. In the pop-up that appears, locate the link reading "this key".
+        1. Right-click the link and select "Save Link As..."
+        1. Name the file "glacier.asc".
 
-    4. Verify the integrity of the Glacier download.
+    1. Verify the integrity of the Glacier download.
 
         1. Import the Glacier public key into your local GPG installation:
            ```
            $ gpg --import ~/Downloads/glacier.asc
            ```
-        2. Switch to the glacier folder:
+        1. Switch to the glacier folder:
            ```
            $ cd ~/glacier
            ```
-        3. Use the public key to verify that the Glacier "fingerprint file" is
+        1. Use the public key to verify that the Glacier "fingerprint file" is
         legitimate:
            ```
            $ gpg --verify SHA256SUMS.sig SHA256SUMS
@@ -81,7 +81,7 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
 
            The warning message is expected, and is not cause for alarm.
 
-        4. Verify the fingerprints in the fingerprint file match the fingerprints
+        1. Verify the fingerprints in the fingerprint file match the fingerprints
         of the downloaded Glacier files:
            ```
            $ sha256sum -c SHA256SUMS 2>&1
@@ -89,19 +89,20 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
            Expected output:
            ```
            Glacier.pdf: OK
+           Glacier-linux-only.pdf: OK
            glacierscript.py: OK
            base58.py: OK
            README.md: OK
            ```
 
-    5. Copy the glacier folder to the Q1 APP USB.
+    1. Copy the glacier folder to the <span class="qapp">Q1 APP</span> USB.
         1. Click on the File Manager icon in the launching dock along the left
         side of the screen.
-        2. Find the "glacier" folder under "Home".
-        3. Click and drag the glacier folder to the icon representing the USB
+        1. Find the "glacier" folder under "Home".
+        1. Click and drag the glacier folder to the icon representing the USB
         drive on the left. The USB drive will look like this, but may have a
         different name:
-        4. If you see an "Error while copying" pop-up, you may be suffering from
+        1. If you see an "Error while copying" pop-up, you may be suffering from
         [this Ubuntu bug](https://bugs.launchpad.net/ubuntu/+source/nautilus/+bug/1021375).
         To fix it, do the following and then retry copying the files:
 
@@ -109,26 +110,26 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
                 ```
                 $ mv ~/.config/nautilus ~/.config/nautilus-bak
                 ```
-            2. Log out of Ubuntu: Click the power icon in the top right of the
+            1. Log out of Ubuntu: Click the power icon in the top right of the
             screen and select "logout" from the drop-down menu.
-            3. Login again with user "ubuntu" and leave the password blank.
+            1. Login again with user "ubuntu" and leave the password blank.
 
-5. Open the Glacier protocol document so that it is available for copy-pasting terminal commands.
-6. Install the remaining application software on the Q1 APP USB.
+1. Open the Glacier Protocol document so that it is available for copy-pasting terminal commands.
+1. Install the remaining application software on the <span class="qapp">Q1 APP</span> USB.
     1. Configure our system to enable access to the software we need in Ubuntu's
     "package repository".
         1. ```
         $ sudo apt-add-repository universe
         ```
-        2. ```
+        1. ```
         $ sudo apt-get update
         ```
-    2. Create a folder for the application files that will be moved to the
+    1. Create a folder for the application files that will be moved to the
     USB:
         ```
         $ mkdir ~/apps
         ```
-    3. Download and perform integrity verification of software available from Ubuntu's package repository:
+    1. Download and perform integrity verification of software available from Ubuntu's package repository:
         * **qrencode**: Used for creating QR codes to move data off quarantined
         computers
         * **zbar-tools**: Used for reading QR codes to import data into quarantined
@@ -137,12 +138,12 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
             $ cd ~/apps
             $ apt download qrencode=4.1.1-1 zbar-tools=0.23.90-1
             ```
-    4.  Copy the contents of the apps folder to the Q1 APP USB:
+    1.  Copy the contents of the apps folder to the <span class="qapp">Q1 APP</span> USB:
         1. Click on the File Manager icon in the launching dock:
-        2. Navigate to the "Home" folder.
-        3. Click and drag "apps" folder to the icon representing
+        1. Navigate to the "Home" folder.
+        1. Click and drag "apps" folder to the icon representing
         the USB drive on the left panel.
-    5. Download [Bitcoin Core](https://bitcoincore.org/), which we'll use for cryptography & financial operations:
+    1. Download [Bitcoin Core](https://bitcoincore.org/), which we'll use for cryptography & financial operations:
         ```
         $ mkdir ~/bitcoin
         $ cd ~/bitcoin
@@ -151,9 +152,9 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
         $ wget https://bitcoincore.org/bin/bitcoin-core-22.0/SHA256SUMS
         $ wget https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0-x86_64-linux-gnu.tar.gz
         ```
-    Then drag the `~/bitcoin` folder to the Q1 APP USB.
-7. Click on the USB drive icon to verify that it has the correct files. The
-contents should look like this
+    Then drag the `~/bitcoin` folder to the <span class="qapp">Q1 APP</span> USB.
+1. Click on the USB drive icon to verify that it has the correct files. The
+contents should look like this:
     ```
     apps
     glacier
@@ -189,14 +190,14 @@ contents should look like this
     Makefile
     LICENSE
     Glacier.pdf
+    Glacier-linux-only.pdf
     .gitignore
     ```
-8. Eject and physically remove the Q1 APP USB from the SETUP 1 computer.
+1. Eject and physically remove the <span class="qapp">Q1 APP</span> USB from the SETUP 1 computer.
 
-    **The Q1 APP USB is now eternally quarantined. It should never again be
+    **The <span class="qapp">Q1 APP</span> USB is now eternally quarantined. It should never again be
     plugged into anything besides the Q1 computer.**
 
-9. Repeat all above steps using the SETUP 2 computer, SETUP 2 BOOT USB, and Q2
-APP USB.
-10. Find a container in which to store all of your labeled hardware, along
+1. Repeat all above steps using the SETUP 2 computer, <span class="setupboot">SETUP 2 BOOT</span> USB, and <span class="qapp">Q2 APP</span> USB.
+1. Find a container in which to store all of your labeled hardware, along
 with the Glacier document hardcopy, when you are finished.

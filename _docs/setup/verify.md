@@ -18,16 +18,16 @@ always a verified copy of the document available.
 1. Find a computer which has Internet access, printer access, and which you have
 permission to install new software on. We'll refer to this computer as the
 "SETUP 1" computer.
-2. Review the errata for the version of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
-3. Download the latest full release of Glacier (*not* just the protocol document)
+1. Review the errata for the version of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
+1. Download the latest full release of Glacier (*not* just the protocol document)
 at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
-4. If your browser does not automatically extract the ZIP file contents into a
+1. If your browser does not automatically extract the ZIP file contents into a
 folder within your downloads directory, do so.
-5. Rename the folder to "glacier."
-6. If you have used Glacier before, *and* you know you have the Glacier public key
+1. Rename the folder to "glacier."
+1. If you have used Glacier before, *and* you know you have the Glacier public key
 imported into a local GPG keyring, skip the next step. (If you don't know,
 that's fine; proceed as normal.)
-7. Obtain the Glacier "public key," used to cryptographically verify the protocol document.
+1. Obtain the Glacier "public key," used to cryptographically verify the protocol document.
   
     Technical details: Glacier's GPG keys are handled with good security practices. They were generated while booting off an Ubuntu Live USB on a factory-new laptop with the wireless card removed, and transferred via USB to a MacBook. The private key is not stored in the cloud. The public key is hosted separately from our software distributions, on Keybase, secured with separate credentials (all of which are in password managers).
 
@@ -50,13 +50,13 @@ that's fine; proceed as normal.)
   individuals from the Bitcoin community.
 
     1. Access bitcoinfacts's Keybase profile at <https://keybase.io/bitcoinfacts>.
-    2. Click the string of letters and numbers next to the key icon.
-    3. In the pop-up that appears, locate the link reading "this key".
-    3. Right-click the link and select "Save Link As..." or "Download Linked File
+    1. Click the string of letters and numbers next to the key icon.
+    1. In the pop-up that appears, locate the link reading "this key".
+    1. Right-click the link and select "Save Link As..." or "Download Linked File
     As..."
-    5. Name the file "glacier.asc".
-
-8. Download and install [GnuPG](https://gnupg.org/), the software we'll use for doing the cryptographic verification. GnuPG is the same software recommended by the Electronic Frontier Foundation's Surveillance Self Defense protocol.
+    1. Name the file "glacier.asc".
+{% if site.platform != "linuxOnly" %}
+1. Download and install [GnuPG](https://gnupg.org/), the software we'll use for doing the cryptographic verification. GnuPG is the same software recommended by the Electronic Frontier Foundation's Surveillance Self Defense protocol.
 
     Technical details: Note that we are foregoing verification of the integrity of
   GnuPG itself. Verification requires having access to a pre-existing, trusted
@@ -74,29 +74,33 @@ that's fine; proceed as normal.)
     1. **macOS**: Download and install the latest available version of
     [GPG Suite](https://gpgtools.org/).
     1. **Linux**: GnuPG comes pre-installed with Linux distributions.
-
-9. Open a terminal window:
+{% endif %}
+1. Open a terminal window:
+{% if site.platform != "linuxOnly" %}
     1. **Windows**: Press Windows-R, type "powershell" and click OK.
-    2. **macOS**: Click the Searchlight (magnifying glass) icon in the menu bar, and
+    1. **macOS**: Click the Searchlight (magnifying glass) icon in the menu bar, and
     type a terminal window. "terminal". Select the Terminal application from the
     search results.
+{% endif %}
     1. **Linux**: Varies; on Ubuntu, press Ctrl-Alt-T.
 
-10. Change the terminal window's active folder to your downloads folder. The
+1. Change the terminal window's active folder to your downloads folder. The
 commands below are based on common default settings; if you put your downloads
 is in a different place, you will need to customize this command.
+{% if site.platform != "linuxOnly" %}
     1. **Windows**:  `> cd $HOME/Downloads/glacier`
-    2. **macOS**:  `$ cd $HOME/Downloads/glacier`
-    3. **Linux**: `$ cd $HOME/Downloads/glacier`
+    1. **macOS**:  `$ cd $HOME/Downloads/glacier`
+{% endif %}
+    1. **Linux**: `$ cd $HOME/Downloads/glacier`
 
-11. Verify the integrity of the downloaded document. For technical background about this process, see <https://en.wikipedia.org/wiki/Digital_signature>.
+1. Verify the integrity of the downloaded document. For technical background about this process, see <https://en.wikipedia.org/wiki/Digital_signature>.
 
     1. Import the Glacier public key into your local GPG installation:
        ```
        $ gpg --import $HOME/Downloads/glacier.asc
        ```
 
-    2. Use the public key to verify that the Glacier "fingerprint file" is legitimate:
+    1. Use the public key to verify that the Glacier "fingerprint file" is legitimate:
        ```
        $ gpg --verify SHA256SUMS.sig SHA256SUMS
        ```
@@ -124,22 +128,25 @@ is in a different place, you will need to customize this command.
        generated and is hosted in a secure manner, and that someone in the community
        may have noticed and raised an alarm if it were surreptitiously changed by an
        attacker.
-    3. Verify the fingerprints in the fingerprint file match the fingerprints of the
+    1. Verify the fingerprints in the fingerprint file match the fingerprints of the
     downloaded Glacier files.
 
-        1. On Linux or Mac:
+        1. On Linux{% if site.platform != "linuxOnly" %} or Mac{% endif %}:
 
             Linux: `$ sha256sum -c SHA256SUMS 2>&1`
-
+{% if site.platform != "linuxOnly" %}
             Mac: `$ shasum -a 256 -c SHA256SUMS 2>&1`
-
+{% endif %}
             Expected output:
             ```
-            Glacier.pdf: OK glacierscript.py: OK
-            base58.py: OK README.md: OK
+            Glacier.pdf: OK
+            Glacier-linux-only.pdf: OK
+            glacierscript.py: OK
+            base58.py: OK
+            README.md: OK
             ```
-
-        2. On Windows 10:
+{% if site.platform != "linuxOnly" %}
+        1. On Windows 10:
 
             ```
             > Get-FileHash -a sha256 Glacier.pdf
@@ -147,17 +154,17 @@ is in a different place, you will need to customize this command.
             ```
             Ensure that the hash output from the first command matches the output by the
             second command. Upper/lower case doesn't matter.
+{% endif %}
+    1. If you do not see the expected output, your copy of the document has not been verified. Stop and seek assistance.
 
-    4. If you do not see the expected output, your copy of the document has not been verified. Stop and seek assistance.
-
-12. Switch to use the new document.
+1. Switch to use the new document.
 
     1. Open the version of the document that you just verified.
-    2. Close this window (of the unverified version of the document you had been
+    1. Close this window (of the unverified version of the document you had been
     using).
-    3. Delete the old, unverified copy of the document.
+    1. Delete the old, unverified copy of the document.
 
-13. Print the verified document.
+1. Print the verified document.
 
 You are strongly encouraged to use the printed copy as a checklist, physically
 marking off each step as you complete it. This reduces the risk of execution

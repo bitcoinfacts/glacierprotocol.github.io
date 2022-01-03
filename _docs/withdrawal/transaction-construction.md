@@ -8,7 +8,7 @@ quarantined environments (for execution in the following section).
 
 1. Execute [Section VI of the Setup Protocol](../../setup/quarantined-workspace/)
 to prepare your quarantined workspace.
-2. Construct the withdrawal transaction.
+1. Construct the withdrawal transaction.
 
    **On the Q1 computer:**
     1. Import QR code data
@@ -19,36 +19,36 @@ to prepare your quarantined workspace.
             ```
             A window will appear with your laptop's video feed.
 
-        2. For each QR code you printed out in [Section I](../../withdrawal/preparation/) of the Withdrawal Protocol:
+        1. For each QR code you printed out in [Section I](../../withdrawal/preparation/) of the Withdrawal Protocol:
             1. Hold the QR code up to the webcam.
-            2. When a green square appears around the QR code on the video
+            1. When a green square appears around the QR code on the video
             feed, it has been successfully read.
-            3. Verify the decoded QR code is shown in the terminal window.
+            1. Verify the decoded QR code is shown in the terminal window.
                 Example:
                 <pre>
                 QR-Code:<span class="warning" style="white-space: pre-wrap;">51410421167f7dac2a159bc3957e3498bb6a7c2f16874bf1fbbe5b523b3632d2c0c43f1b491f6f2f449ae45c9b0716329c0c2dbe09f3e5d4e9fb6843af083e222a70a441043704eafafd73f1c32fafe10837a69731b93c0179fa268fc325bdc08f3bb3056b002eac4fa58c520cc3f0041a097232afbe002037edd5ebdab2e493f18ef19e9052ae</span></pre>
-            4. Copy-paste the decoded data (everything *after*, but not
+            1. Copy-paste the decoded data (everything *after*, but not
             including, "QR-code:") into the Quarantined Scratchpad.
-            5. Make a note of what the data is, based on your handwritten
+            1. Make a note of what the data is, based on your handwritten
             label from the printed QR code (i.e. "raw unspent transaction" or
             "redemption script").
-    2. Close the window with the live video feed.
-    3. Verify the destination address in the Quarantined Scratchpad matches
+    1. Close the window with the live video feed.
+    1. Verify the destination address in the Quarantined Scratchpad matches
     your handwritten copy of the destination address.
-    4. Transcribe the other information you will be using into the Quarantined
+    1. Transcribe the other information you will be using into the Quarantined
     Scratchpad. If you make a transcription error, it will be easier to
     identify and fix in the scratchpad compared to a situation where you
     transcribed it directly
     into GlacierScript.
         1. <span class="danger">Private keys</span>
-        2. Fee rate
+        1. Fee rate
 
             Transcribe the private keys with reasonable care, but painstaking
             verification is not critical. (If you make an error, the
             withdrawal will simply fail, prompting you to fix your
             transcription error.)
 
-    5. If any raw unspent transactions are too long, move each too-long
+    1. If any raw unspent transactions are too long, move each too-long
     transaction to its own file.
 
         GlacierScript normally takes input by copy-pasting values, but it can only accept copy-pasted values up to about 4000 characters in size.
@@ -58,28 +58,28 @@ to prepare your quarantined workspace.
             1. If you're not sure if it's 4000 characters, you can try the
             copy-paste method. If it's too long (or if there is some other
               problem with it), you'll receive a "TX decode" error (code 22).
-        2. You can do this by opening a new TextEdit window, pasting the raw
+        1. You can do this by opening a new TextEdit window, pasting the raw
         unspent transaction into it, and saving the file.
-        3. Make sure to save it to the folder containing `glacierscript.py`.
-    6. Begin construction of the withdrawal transaction:
+        1. Make sure to save it to the folder containing `glacierscript.py`.
+    1. Begin construction of the withdrawal transaction:
         ```
         $ cd ~/glacier
         $ ./glacierscript.py create-withdrawal-data
         ```
-    7. When prompted for the number of private keys to use:
+    1. When prompted for the number of private keys to use:
         1. **<span style="color: red;">If you are doing an initial test withdrawal for a new cold
         storage address, choose *N*</span>** (i.e. the total number of keys in your
         multisignature withdrawal policy -- 4 if you use the default
         recommendation).
-        2. Otherwise, select 2 (assuming you're using the recommended 2-of-n
+        1. Otherwise, select 2 (assuming you're using the recommended 2-of-n
         withdrawal policy).
-    8. Enter all data as prompted by copy-pasting from the Quarantined
+    1. Enter all data as prompted by copy-pasting from the Quarantined
     Scratchpad.
         1. *Technical note for experienced Bitcoin users:* If the withdrawal
         amount & fee are cumulatively less than the total amount of the
         unspent transactions, the remainder will be sent back to the same cold
         storage address as change.
-    9. The script will output a "raw signed transaction" and a *fingerprint* of the signed transaction for verification purposes.
+    1. The script will output a "raw signed transaction" and a *fingerprint* of the signed transaction for verification purposes.
 
         Example output:
         <pre>
@@ -93,20 +93,20 @@ to prepare your quarantined workspace.
 
         QR code for transaction in transaction.png</pre>
 
-3. Verify transaction construction
+1. Verify transaction construction
     1. **On the Q2 computer**, repeat step 2 above.
         1. Note: it is important to enter the <span class="danger">private keys</span> in the same
         order on each of the quarantined computers.
-    2. Verify that the <span class="warning">"Transaction fingerprint"</span>
+    1. Verify that the <span class="warning">"Transaction fingerprint"</span>
     output by GlacierScript is identical on both computers. It is possible for
     malware to exfiltrate bits of the private key in the transaction signature
     by choosing the nonce in a particular way. Bitcoin Core generates the
     nonce deterministically, as a function of a hash of the transaction, so we
     can detect the presence of any environment-specific malware by
     comparing the transaction generated in each quarantined environment.
-    3. **If there are any discrepancies, do not proceed**. Restart the
+    1. **If there are any discrepancies, do not proceed**. Restart the
     Withdrawal Protocol and seek assistance if discrepancies persist.
-4. Visually hide all critically sensitive data.
+1. Visually hide all critically sensitive data.
 
     We'll be using a smartphone with a live Internet connection to read QR
     codes from the quarantined computer screens. Any malware (or a malicious
@@ -118,56 +118,56 @@ to prepare your quarantined workspace.
     1. Put your <span class="danger">Cold Storage Information Packets</span>
     out of sight -- this prevents a smartphone camera from accidentally seeing
     them.
-    2. Delete all text from the Quarantined Scratchpad on the
+    1. Delete all text from the Quarantined Scratchpad on the
     **Q1 and Q2** computers.
-    3. **On the Q1 computer:**
+    1. **On the Q1 computer:**
         1. Copy-paste the <span class="warning">raw signed transaction</span>
         from the terminal window to the
         Quarantined Scratchpad.
-        2. Enable line wrapping so the entire
+        1. Enable line wrapping so the entire
         <span class="warning">raw signed transaction</span>
         can be seen.
             1. With the Quarantined Scratchpad window active, go to the menu
             bar at the top of the screen.
-            2. Select Edit.
-            3. Select Preferences.
-            4. Select the View tab.
-            5. Uncheck "Do not split words over two lines".
-    4. Clear the terminal windows on the **Q1 and Q2** computers.
+            1. Select Edit.
+            1. Select Preferences.
+            1. Select the View tab.
+            1. Uncheck "Do not split words over two lines".
+    1. Clear the terminal windows on the **Q1 and Q2** computers.
        ```
        $ clear
        ```
-5. Extract the signed transaction from the quarantined environment.
+1. Extract the signed transaction from the quarantined environment.
     1. QR reader setup
         1. Remove a smartphone from the Faraday bag and turn it on.
-        2. If the smartphone doesn't already have a QR code reader on it,
+        1. If the smartphone doesn't already have a QR code reader on it,
         install one.
 
            Any reader is fine as long as it can read all types of QR
         codes, but here are recommendations we've tested with this protocol:
         [iOS](https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609?mt=8),
         [Android](https://play.google.com/store/apps/details?id=com.application_4u.qrcode.barcode.scanner.reader.flashlight&hl=en).
-    2. Transfer the signed transaction data to a non-quarantined computer.
+    1. Transfer the signed transaction data to a non-quarantined computer.
         1. **On the Q1 computer**, display the <span class="warning">raw
         signed transaction</span> as a QR code on the screen:
             1. In File Manager, navigate to the "Home" folder, then the
             "glacier" folder, and double-click "transaction.png".
-        2. Use the smartphone's QR code reader to read the QR code. When the
+        1. Use the smartphone's QR code reader to read the QR code. When the
         QR code is successfully read, the smartphone should display the
         <span class="warning"> raw signed transaction</span>.
-        3. Verify the <span class="warning">raw signed transaction</span> on
+        1. Verify the <span class="warning">raw signed transaction</span> on
         the smartphone matches the signed transaction data in the Quarantined
         Scratchpad.
 
            You only need to verify the first 16 characters, last 16
         characters, and a few somewhere in the middle.
-        4. **If it does not match, do not proceed**. Try using a different QR
+        1. **If it does not match, do not proceed**. Try using a different QR
         reader application or restarting the Withdrawal Protocol. Seek
         assistance if discrepancies persist.
-        5. Use the smartphone to send the
+        1. Use the smartphone to send the
         <span class="warning">raw signed transaction</span> to yourself using
         a messaging app which you'll be able to access from a laptop.
-6. Shut down **both** quarantined computers entirely. As a precaution against
+1. Shut down **both** quarantined computers entirely. As a precaution against
 side channel attacks, the quarantined computers should not be active except
 when they absolutely need to be.
     ```
