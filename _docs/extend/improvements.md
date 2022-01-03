@@ -17,7 +17,7 @@ withdrawals
 ## No Address Reuse
 Currently, Glacier reuses addresses for
 both depositing and withdrawing funds. As discussed in the [protocol design
-document](../design-doc/overview.md), this has both privacy and security implications.
+document](../../design-doc/overview), this has both privacy and security implications.
 
 This could be
 implemented with HD wallets, which would allow one to generate one master
