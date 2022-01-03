@@ -20,7 +20,7 @@ permission to install new software on. We'll refer to this computer as the
 "SETUP 1" computer.
 1. Review the errata for the version of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
 1. Download the latest full release of Glacier (*not* just the protocol document)
-at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
+at <https://github.com/bitcoinfacts/GlacierProtocol/releases/latest>.
 1. If your browser does not automatically extract the ZIP file contents into a
 folder within your downloads directory, do so.
 1. Rename the folder to "glacier."

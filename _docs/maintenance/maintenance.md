@@ -27,12 +27,12 @@ expected.
 1. Check for Glacier security upgrades
     1. Access the latest full release of Glacier (*not* just the protocol
     document) at
-    [https://github.com/bitcoinfacts/GlacierProtocol/releases](https://github.com/bitcoinfacts/GlacierProtocol/releases).
+    [https://github.com/bitcoinfacts/GlacierProtocol/releases/latest](https://github.com/bitcoinfacts/GlacierProtocol/releases/latest).
     1. Locate Release Notes for all versions since the last time
     you executed the Maintenance Protocol (or if it's the first time, since the
     Glacier version specified on your
     <span class="warning">Cold Storage Information Page</span>).
-    1. See whether any of those releases recommend any security upgrades. (Any recommendations are prominently mentioned at the top of the notes for each version.)
+    1. See whether any of those releases recommend any security upgrades.
     1. Whether or not you decide to upgrade, review the errata for the version
     of Glacier you are using at
     [https://github.com/bitcoinfacts/GlacierProtocol/releases](https://github.com/bitcoinfacts/GlacierProtocol/releases).

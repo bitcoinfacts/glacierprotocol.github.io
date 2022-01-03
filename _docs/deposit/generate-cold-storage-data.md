@@ -27,7 +27,7 @@ Protocol unless explicitly instructed otherwise.</span>**
 
 1. If this is **not** your first time working with Glacier:
     1. Use a networked computer to access the latest full release of Glacier
-    ( not just the protocol document) at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
+    ( not just the protocol document) at <https://github.com/bitcoinfacts/GlacierProtocol/releases/latest>.
     1. Check the Release Notes of the protocol document to see if
     there are any new versions of Glacier recommended.
     1. Whether or not you decide to upgrade, review the errata for the version
