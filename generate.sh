@@ -4,12 +4,10 @@
 # root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier.pdf
 # root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier-linux-only.pdf
 set -e
-make -C ../glacierprotocol.github.io/ stop-site
-make -C ../glacierprotocol.github.io/
-rm ../glacierprotocol.github.io/assets/glacier.pdf
-make -C ../glacierprotocol.github.io/ pdf
-echo "Generated PDF assets/glacier.pdf"
-read -p "Press any key to resume ..."
+# make stop-site
+# make
+# rm ./assets/glacier.pdf
+# make pdf
 rm $1
 echo "Deleted old PDF: $1"
 read -p "Press any key to resume ..."

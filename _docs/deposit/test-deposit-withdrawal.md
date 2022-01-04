@@ -1,5 +1,5 @@
 ---
-title: Test Deposit & Withdrawal
+title: Test Deposit and Withdrawal
 ---
 
 It's important to make sure everything is working properly before proceeding.

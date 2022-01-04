@@ -1,5 +1,5 @@
 ---
-title: Verify & Print Protocol Document
+title: Verify and Print Protocol Document
 ---
 
 The Setup Protocol is used to prepare hardware, and download and verify needed

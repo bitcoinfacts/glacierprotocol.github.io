@@ -1,5 +1,5 @@
 ---
-title: Transaction Execution & Verification
+title: Transaction Execution and Verification
 ---
 
 On any Internet-connected computer:

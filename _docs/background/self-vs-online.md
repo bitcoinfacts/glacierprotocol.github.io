@@ -1,5 +1,5 @@
 ---
-title: Self-Managed Storage vs. Online
+title: "Self-Managed Storage vs Online"
 ---
 
 Let's start by assessing whether Glacier is right for you.

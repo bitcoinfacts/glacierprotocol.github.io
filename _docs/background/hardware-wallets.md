@@ -1,5 +1,5 @@
 ---
-title: Glacier vs. Hardware Wallets
+title: Glacier vs Hardware Wallets
 ---
 
 Many people who choose
