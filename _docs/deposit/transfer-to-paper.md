@@ -6,7 +6,7 @@ In this section, you'll move the cold storage data you generated in [Section I](
 done using a combination hand transcription and
 [QR codes](https://en.wikipedia.org/wiki/QR_code).
 
-1. Transfer the <span class="danger">private keys</span> to paper.
+1. Transfer the <span class="danger">private keys</span> to paper:
     1. Write each <span class="danger">private key</span> on a **separate** piece
     of TerraSlate paper (**one** key per page).
         1. Do **not** write anything else on the paper unless specifically
@@ -37,7 +37,7 @@ done using a combination hand transcription and
     1. Label each page with:
         1. Today's date
         1. The version of Glacier used (listed on the front page of this document)
-1. Visually hide all critically sensitive data.
+1. Visually hide all critically sensitive data:
 
     We'll be using a smartphone with a live Internet connection to read QR
     codes from the quarantined computer screens. Any malware (or a malicious
@@ -59,18 +59,18 @@ done using a combination hand transcription and
         1. Copy-paste the <danger class="warning">redemption script</danger>
         from the terminal window to the Quarantined Scratchpad.
         1. Enable line wrapping so the entire <span class="warning">redemption
-        script</span> can be seen.
+        script</span> can be seen:
             1. With the Quarantined Scratchpad window active, go to the menu
             bar at the top of the screen.
             1. Select Edit.
             1. Select Preferences.
             1. Select the View tab.
             1. Uncheck "Do not split words over two lines".
-    1. Clear the terminal windows on the **Q1 and Q2** computers.
+    1. Clear the terminal windows on the **Q1 and Q2** computers:
        ```
        $ clear
        ```
-1. QR reader setup
+1. QR reader setup:
     1. Remove a smartphone from the Faraday bag and turn it on.
     1. If the smartphone doesn't already have a QR code reader on it, install one.
 
@@ -80,7 +80,7 @@ done using a combination hand transcription and
     [Android](https://play.google.com/store/apps/details?id=com.application_4u.qrcode.barcode.scanner.reader.flashlight&hl=en).
 
 1. Transfer the <span class="warning">cold storage address</span> to a
-non-quarantined computer.
+non-quarantined computer:
     1. **On the Q1 computer**, display the
     <span class="warning">cold storage address</span> as a
     <span class="warning">QR code</span> on the screen:
@@ -117,7 +117,7 @@ when they absolutely need to be.
     ```
     The recommended Acer laptop may require you to hold down the power button for
     several seconds to complete the shutdown.
-1. Create <span class="warning">Cold Storage Information Pages</span>.
+1. Create <span class="warning">Cold Storage Information Pages</span>:
 
    **Using any Internet-connected computer:**
     1. Access the copies of the <span class="warning">cold storage address</span>
@@ -126,9 +126,9 @@ when they absolutely need to be.
     1. Open an empty document in any text editing application. This will be used
     to create the <span class="warning">Cold Storage Information Page</span>.
     1. Put the following information into the document:
-        1. Copy-paste the <span class="warning">cold storage address</span>
-        1. Copy-paste the <span class="warning">redemption script</span>
-        1. Type today's date
+        1. Copy-paste the <span class="warning">cold storage address</span>.
+        1. Copy-paste the <span class="warning">redemption script</span>.
+        1. Type today's date.
         1. Type the version of Glacier used (listed on the first page of this document)
     1. Do **not** put anything else in the document (such as "Bitcoin",
         "Glacier", "private key", etc.)

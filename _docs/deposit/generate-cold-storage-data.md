@@ -34,14 +34,14 @@ Protocol unless explicitly instructed otherwise.</span>**
     of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
 1. Execute [Section VI of the Setup Protocol](../../setup/quarantined-workspace/) to
 prepare your quarantined workspace.
-1. Create entropy for private keys
+1. Create entropy for private keys:
 
     Creating an unguessable private key requires
     *entropy* -- random data. We'll combine two sources of entropy to generate
     our keys. This ensures securely random keys even if *one* entropy source is
     somehow flawed or compromised to be less-than-perfectly random.
 
-    1. Generate dice entropy
+    1. Generate dice entropy:
         1. Type "DICE ENTROPY" into both Quarantined Scratchpads.
         1. Roll 62 six-sided dice, shaking the dice thoroughly each roll.
         62 dice rolls corresponds to 160 bits of entropy. See the
@@ -63,11 +63,11 @@ prepare your quarantined workspace.
        Repeat this process a total of *N* times, so that you have a total of <span
        class="danger">*N* lines of numbers</span> in each Quarantined Scratchpad.
 
-    1. Generate computer entropy    
+    1. Generate computer entropy:
         1. Type "COMPUTER ENTROPY" into both computers' Quarantined Scratchpads.
         (This is a descriptive heading to keep your notes organized and minimize
         risk of error.)
-        1. Make sure you are in the `~/glacier folder`:
+        1. Make sure you are in the `glacier` folder:
            ```
            $ cd ~/glacier
            ```
@@ -94,10 +94,10 @@ prepare your quarantined workspace.
         into the Quarantined Scratchpad on the other quarantined computer.
 
 
-    1. Generate new cold storage data information using your entropy
+    1. Generate new cold storage data information using your entropy:
 
        **On the Q1 computer:**
-        1. Run GlacierScript to generate the private keys.
+        1. Run GlacierScript to generate the private keys:
 
            In the command below, you'll need to specify the number of keys required
            by your multisignature withdrawal policy.
@@ -133,7 +133,7 @@ prepare your quarantined workspace.
            QR code for cold storage address in address.png
            QR code for redemption script in redemption.png</pre>
 
-    1. Verify the integrity of the cold storage data.
+    1. Verify the integrity of the cold storage data:
         1. **On the Q2 computer**, repeat step (c) above.
         1. Verify that the output of GlacierScript shown in the terminal
         window is identical on both computers:
@@ -156,7 +156,7 @@ prepare your quarantined workspace.
 
         1. **If there are any discrepancies, do not proceed.**
             1. Check whether the entropy in both Quarantined Scratchpads matches
-            precisely.
+            precisely:
                 1. If they are different by 1-3 characters (presumably due to
                 transcription errors), manually tweak them to make them match.
                 It doesn't matter which scratchpad is tweaked.

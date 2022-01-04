@@ -11,7 +11,7 @@ to prepare your quarantined workspace.
 1. Construct the withdrawal transaction.
 
    **On the Q1 computer:**
-    1. Import QR code data
+    1. Import QR code data:
         1. Start the QR code reader:
 
             ```

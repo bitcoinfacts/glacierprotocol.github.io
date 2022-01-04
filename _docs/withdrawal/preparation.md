@@ -143,7 +143,7 @@ to withdraw.
         1. If you are running a Bitcoin Core full node, you can run `bitcoin-cli estimatesmartfee 6`
         This returns a fee rate in BTC/kB; multiply the result by 100,000 to get satoshis / byte.
 
-        Otherwise, use a service listed at https://b10c.me/A-list-of-public-feerate-estimator-APIs/
+        Otherwise, use a service listed at <https://b10c.me/A-list-of-public-feerate-estimator-APIs/>
 
         1. Write the fee estimate corresponding to your desired confirmation time on a piece of paper
         labeled "Fee rate." Round up to the nearest whole number in units of satoshis / byte.

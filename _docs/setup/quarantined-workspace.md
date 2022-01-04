@@ -39,11 +39,10 @@ first time and do **not** plan on executing the Deposit or Withdrawal protocol n
 1. Put your <span class="qboot">Q1 BOOT</span> USB into an open slot in your Q1 computer.
 1. Boot off the USB drive. If you've forgotten how, refer to the procedure in [Section IV](../../setup/create-boot-usb/) of the Setup Protocol.
 1. Plug the <span class="qapp">Q1 APP</span> USB into the Q1 computer
-1. Copy the software from the Q1 computer's RAM disk.
+1. Copy the software from the Q1 computer's RAM disk:
     1. Click the File Manager icon from the launchpad on the left side of the
     screen.
-    1. Click on the App USB on the left of the file manager. It will look like
-    the image on the right, but may have a different name.
+    1. Click on the App USB on the left of the file manager.
     1. Drag the contents of the USB to the "Home" directory on the left side of
     file manager.
 1. Open a copy of this document on the Q1 computer.
@@ -107,19 +106,19 @@ first time and do **not** plan on executing the Deposit or Withdrawal protocol n
             /home/ubuntu/bitcoin/bitcoin-22.0/bin/bitcoin-cli
             ```
 1. Change into the glacier directory. You'll be using this directory to execute
-software for the protocol.
+software for the protocol:
     ```
     $ cd ~/glacier
     ```
-1. Prepare GlacierScript for execution.
+1. Prepare GlacierScript for execution:
     ```
     $ chmod +x glacierscript.py
     ```
 1. Prepare the "Quarantined Scratchpad" -- an empty file you'll use as a place
-to jot notes.
+to jot notes:
     1. Click the "Search your computer" icon at the top of the launcher along
     the left side of the screen.
     1. Type "text editor".
     1. Click the Text Editor icon.
     1. A blank window should appear.
-1. Repeat the above steps using the Q2 computer, <span class="qboot">Q1 BOOT</span> USB and <span class="qapp">Q2 APP</span> USB.
+1. Repeat the above steps using the Q2 computer, <span class="qboot">Q2 BOOT</span> USB and <span class="qapp">Q2 APP</span> USB.
