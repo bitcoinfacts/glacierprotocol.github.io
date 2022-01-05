@@ -1,13 +1,18 @@
 #!/bin/bash
+# TODO: simplify these steps
 # This script automates the steps of generating and signing a new version of the Glacier.pdf or Glacier-linux-only.pdf
-# Run this script from the GlacierProtocol directory:
-# root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier.pdf
+# 1. First, run these commands:
+#   make stop-site
+#   make
+#   rm ./assets/glacier.pdf
+#   make pdf
+# 2. In _config.yml, set "platform" to: "linuxOnly" and save
+# 3. Run this script from the GlacierProtocol directory:
 # root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier-linux-only.pdf
+# 4. In _config.yml, set "platform" to: "all" and save
+# 5. Run: root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier.pdf
+# 6. git commit, then git push
 set -e
-# make stop-site
-# make
-# rm ./assets/glacier.pdf
-# make pdf
 rm $1
 echo "Deleted old PDF: $1"
 read -p "Press any key to resume ..."
