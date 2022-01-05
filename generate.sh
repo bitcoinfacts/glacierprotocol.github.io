@@ -25,8 +25,9 @@
 # root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier.pdf
 # 13. git commit -m "you message"
 # 14. git push bitcoinfacts master
-# 15. git tag ...
-# 16. Create a release in GitHub
+# 15. git tag v...
+# 16. git push bitcoinfacts --tags
+# 17. Create a release in GitHub
 set -e
 rm $1
 echo "Deleted old PDF: $1"
