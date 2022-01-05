@@ -6,24 +6,23 @@ This section is meant to be done immediately before executing the Deposit or
 Withdrawal protocols. If you are executing the Setup Protocol for the
 first time and do **not** plan on executing the Deposit or Withdrawal protocol now, you can stop here.
 
-1. Block side channels
+1. Block side channels:
 
     [Side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)
     are a form of electronic threat based on the physical nature of computing
     hardware (as opposed to algorithms or their software implementations).
     Side channel attacks are rare, but it's relatively straightforward to
     defend against most of them.
-
-    1. Visual side channel
+    1. Visual side channel:
         1. Ensure that no humans or cameras (e.g. home security cameras, which
         can be hacked) have visual line-of-sight to the Quarantined Computers.
         1. Close doors and window shades.
-    1. [Acoustic side channel](https://en.wikipedia.org/wiki/Acoustic_cryptanalysis)
+    1. [Acoustic side channel](https://en.wikipedia.org/wiki/Acoustic_cryptanalysis):
         1. Choose a room where sound will not travel easily outside.
         1. Shut down nearby devices with microphones (e.g. smartphones and
         other laptops).
         1. Plug in and turn on a table fan to generate white noise.
-    1. [Power side channel](http://sharps.org/wp-content/uploads/CLARK-ESORICS13.pdf)
+    1. [Power side channel](http://sharps.org/wp-content/uploads/CLARK-ESORICS13.pdf):
         1. Unplug both Quarantined Computers from the wall.
         1. Run them **only on battery power** throughout this protocol.
         1. Make sure they are fully charged first! If you run out of battery,
@@ -32,30 +31,27 @@ first time and do **not** plan on executing the Deposit or Withdrawal protocol n
     and other side channels. Including
     [seismic](https://www.cc.gatech.edu/fac/traynor/papers/traynor-ccs11.pdf),
     [thermal](https://cyber.bgu.ac.il/bitwhisper-heat-air-gap/),
-    and [magnetic](http://fc15.ifca.ai/preproceedings/paper_14.pdf).
+    and [magnetic](http://fc15.ifca.ai/preproceedings/paper_14.pdf):
         1. Turn off all other computers and smartphones in the room.
         1. Put portable computing devices in the Faraday bag and seal the bag.
         1. Unplug desktop computers.
 1. Put your <span class="qboot">Q1 BOOT</span> USB into an open slot in your Q1 computer.
-1. Boot off the USB drive. If you've forgotten how, refer to the procedure in [Section IV](../../setup/create-boot-usb/) of the Setup Protocol.
-1. Plug the <span class="qapp">Q1 APP</span> USB into the Q1 computer
+1. Boot off the USB drive. If you've forgotten how, refer to the procedure in [ Section IV of the Setup Protocol](../../setup/create-boot-usb/).
+1. Plug the <span class="qapp">Q1 APP</span> USB into the Q1 computer.
 1. Copy the software from the Q1 computer's RAM disk:
     1. Click the File Manager icon from the launchpad on the left side of the
     screen.
     1. Click on the App USB on the left of the file manager.
     1. Drag the contents of the USB to the "Home" directory on the left side of
     file manager.
-1. Open a copy of this document on the Q1 computer.
-    1. In the File Manager find the glacier folder. The PDF file for this
+1. Open a copy of this document on the Q1 computer:
+    1. In the File Manager find the glacier folder, the PDF file for this
     document should be visible with the name "Glacier.pdf." Open it.
 
-        You won't be able to click any external links in the document, since you
-        don't have a network connection. If you need to look something up on the
-        internet, do so in a distant room. Do not remove devices from the Faraday
-        bag before doing going to the other room.
+        Note: You won't be able to click any external links in the document, since you don't have a network connection. If you need to look something up on the internet, do so in a distant room. Do not remove devices from the Faraday bag before doing going to the other room.
 
 1. Open a Terminal window by pressing Ctrl-Alt-T.
-1. Install the application software on the Q1 computer's RAM disk.
+1. Install the application software on the Q1 computer's RAM disk:
     1. Install applications from the `apps` folder:
         ```
         $ cd ~/apps
@@ -63,7 +59,7 @@ first time and do **not** plan on executing the Deposit or Withdrawal protocol n
         ```
 
     1. Install Bitcoin Core:
-        1. Run commands to import and verify the Bitcoin Core release
+        1. Run commands to import and verify the Bitcoin Core release:
             ```
             $ cd ~/bitcoin
             $ gpg --import jon@atack.com

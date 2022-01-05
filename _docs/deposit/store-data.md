@@ -4,7 +4,7 @@ title: Store Cold Storage Data
 
 1. Shut down any nearby computers or smartphones, or other devices with cameras.
 1. Immediate storage of
-<span class="danger">Cold Storage Information Packets</span>
+<span class="danger">Cold Storage Information Packets</span>:
     1. Double-check to make sure each envelope contains a handwritten private
     key and a <span class="warning">Cold Storage Information Page</span>.
     1. Seal each envelope.
@@ -15,17 +15,17 @@ title: Store Cold Storage Data
     possible location in your home or office that is immediately accessible.
     1. No, really. Like right now. That's basically a huge pile of cash you
     have just sitting there in envelopes on your desk.
-1. Hardware storage
+1. Hardware storage:
     1. Put tamper-resistant seals on the ends of all USB drives.
     1. Close the quarantined laptops, and seal the screen shut with a
     tamper-resistant seal.
     1. Store the hardware somewhere where it is unlikely to be used by accident.
-1. Maintenance planning
-  1. Create a reminder for yourself in six months to execute the
+1. Maintenance planning:
+   1. Create a reminder for yourself in six months to execute the
   [Maintenance Protocol](../../maintenance/maintenance/).
   (If you don't have a reminder system you trust, find one on the web.)
 1. Long-term storage of
-<span class="danger">Cold Storage Information Packets</span>
+<span class="danger">Cold Storage Information Packets</span>:
     1. As soon as possible, transfer each
     <span class="danger">Cold Storage Information Packet</span> to its secure
     storage location (e.g. safe deposit box).

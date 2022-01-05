@@ -11,7 +11,7 @@ handling any critically sensitive cold storage data, so you can use any
 Internet-connected computer for this section.
 
 1. Open your electronic copy of the
-<span class="warning">Cold Storage Information Page</span> (see [Section II](../../deposit/transfer-to-paper/) of the Deposit Protocol for details).
+<span class="warning">Cold Storage Information Page</span> (see [Section II of the Deposit Protocol](../../deposit/transfer-to-paper/) for details).
 1. Perform a test deposit:
     1. Use the wallet software or service of your choice to send the approximate
     equivalent to fund 1000 bytes of transactions to your
@@ -30,7 +30,7 @@ Internet-connected computer for this section.
     on the software or service you are using to send funds, but it should be
     displayed prominently.
 1. Perform a test withdrawal:
-    1. Execute the [Withdrawal Protocol](../../withdrawal/execution/) to withdraw
+    1. Execute the [Withdrawal Protocol](../../withdrawal/preparation/) to withdraw
     the remaining balance ($6 USD - deposit fees) from cold storage to a regular
     Bitcoin address of your choice.
     1. Wait for the Bitcoin network to confirm the transaction at least once.

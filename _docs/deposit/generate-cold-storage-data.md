@@ -5,16 +5,14 @@ redirect_from: /docs/deposit/
 
 The Deposit Protocol is used to transfer bitcoins into high-security cold storage. If you have previously used the
 Deposit Protocol to deposit funds into cold storage, and want to deposit
-additional funds to the same cold storage address, skip to [Section IV](../../deposit/deposit-execution/) of the Deposit Protocol.
+additional funds to the same <span class="warning">cold storage address</span>, skip to [Section IV of the Deposit Protocol](../../deposit/deposit-execution/).
 
-By the end of this section, you will generate the following information.
+By the end of this section, you will generate the following information:
 
 * The <span class="danger">*N* private keys</span>: These are the keys that will later
 be used to unlock your funds. You'll create several private keys, depending on the
 multisignature withdrawal policy you chose (e.g. 4 keys for a 2-of-4 withdrawal
-policy).
-
-  In this protocol, the total number of private keys you're creating will be
+policy). In this protocol, the total number of private keys you're creating will be
 referred to as *N*.
 * The <span class="warning">cold storage address</span>: An alphanumeric
 string indicating the virtual location of your funds.
@@ -65,15 +63,15 @@ prepare your quarantined workspace.
 
     1. Generate computer entropy:
         1. Type "COMPUTER ENTROPY" into both computers' Quarantined Scratchpads.
-        (This is a descriptive heading to keep your notes organized and minimize
-        risk of error.)
+        This is a descriptive heading to keep your notes organized and minimize
+        risk of error.
         1. Make sure you are in the `glacier` folder:
            ```
            $ cd ~/glacier
            ```
         1. **On the Q1 computer** enter the following command. You'll need to supply
         the number of keys required for your multisignature withdrawal policy
-        (4 by default).
+        (4 by default):
            <pre>
            $ ./glacierscript.py entropy --num-keys <span class="primary">number-of-keys-here</span>
            </pre>
@@ -110,11 +108,11 @@ prepare your quarantined workspace.
            ```
            $ ./glacierscript.py create-deposit-data -m 2 -n 4 --p2wsh
            ```
-        1. GlacierScript will prompt you to enter *N* 62-number lines of dice entropy and *N* lines of computer entropy.
+        1. GlacierScript will prompt you to enter <span class="danger">*N* 62-number lines of dice entropy</span> and <span class="danger">*N* lines of computer entropy</span>.
         1. GlacierScript will output your cold storage data:
-            * *N* private keys
-            * A cold storage address
-            * A redemption script
+            * <span class="danger">*N* private keys</span>
+            * <span class="warning">A cold storage address</span>
+            * <span class="warning">A redemption script</span>
 
            Example output:
 

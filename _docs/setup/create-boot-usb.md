@@ -13,11 +13,11 @@ directly from the USB drive, without using the computer's hard drive in any
 way.)
 
 The *first two* USB drives ("Setup Boot USBs") are the USB drives you labeled
-<span class="setupboot">SETUP 1 BOOT</span> and <span class="setupboot">SETUP 2 BOOT</span> in [Section III](../../setup/quarantined-hardware) of the Setup Protocol. They will be prepared using
+<span class="setupboot">SETUP 1 BOOT</span> and <span class="setupboot">SETUP 2 BOOT</span> in [Section II of the Setup Protocol](../../setup/non-quarantined-hardware). They will be prepared using
 your Setup Computers{% if site.platform != "linuxOnly" %}, which may be running Windows, macOS, or something else{% endif %}.
 
 The *last two* USB drives ("Quarantined Boot USBs") are the USB drives you
-labeled <span class="qboot">Q1 BOOT</span> and <span class="qboot">Q2 BOOT</span> in [Section III](../../setup/quarantined-hardware) of the Setup Protocol. They will be prepared using your
+labeled <span class="qboot">Q1 BOOT</span> and <span class="qboot">Q2 BOOT</span> in [Section III of the Setup Protocol](../../setup/quarantined-hardware). They will be prepared using your
 Setup Computers *while booted off* a *Setup Boot USB* which is running Ubuntu.
 
 Technical details: The Non-Quarantined OS USBs serve two purposes:
@@ -31,16 +31,15 @@ be permanently unplugged from their Setup Computer the moment they are created.)
 default OS to undermine a Quarantined USB setup process (the malware would
 first have to propagate itself to the Non-Quarantined OS USB).
 
-1. Perform the following steps on your SETUP 1 computer.
-1. If you are not already reading this document on the SETUP 1 computer, open a
+Perform the following steps on your SETUP 1 computer:
+   1. If you are not already reading this document on the SETUP 1 computer, open a
 copy there.
-1. Open a terminal window:
+   1. Open a terminal window:
 {% if site.platform != "linuxOnly" %}
-    1. **Windows**: Press Windows-R, type "powershell" and click OK.
-    1. **macOS**: Click the Searchlight (magnifying glass) icon in the menu bar,
-    and type "terminal". Select the Terminal application from the search results.{% endif %}
-    1. **Linux**: Varies; on Ubuntu, press Ctrl-Alt-T.
-1. Change the terminal window’s active folder to the Downloads folder:
+      1. **Windows**: Press Windows-R, type "powershell" and click OK.
+      1. **macOS**: Click the Searchlight (magnifying glass) icon in the menu bar, and type "terminal". Select the Terminal application from the search results.{% endif %}
+      1. **Linux**: Varies; on Ubuntu, press Ctrl-Alt-T.
+   1. Change the terminal window’s active folder to the Downloads folder:
 {% if site.platform != "linuxOnly" %}
       1. **Windows**: `> cd $HOME/Downloads`
       1. **macOS**: `$ cd $HOME/Downloads`{% endif %}
@@ -77,7 +76,7 @@ copy there.
         characters, last 8 characters, and a few somewhere in the middle.**
 
         Technical details: Because you verified the checksum & checksum
-        signature for this document in [Section I](../../setup/verify/) of the Setup Protocol, we are omitting the GPG
+        signature for this document in [Section I of the Setup Protocol](../../setup/verify/), we are omitting the GPG
         verification of some other fingerprints in the protocol. For a detailed
         security analysis, see the design document.
 
@@ -241,9 +240,7 @@ copy there.
                 ```
                 $ df
                 ```
-            1. Unmount the USB drive. See below sample output.
-
-                Sample output:
+                See below sample output:
                 ```
                 Filesystem  1K-blocks  Used Available Use% Mounted on
                 udev      16432268      0  16432268   0% /dev
@@ -252,8 +249,9 @@ copy there.
                 tmpfs     3288880      72   3288808   1% /run/user/1000
                 /dev/sda1 1467360 1467360   0         100% /media/vivek/data
                 ```
+            1. Unmount the USB drive.
                 
-                In this case, you need to unmount `sda1`:
+                In the case of the above sample output, you need to unmount `sda1`:
                 ```
                 $ sudo umount /dev/sda1
                 ```
@@ -298,7 +296,7 @@ copy there.
                 Computer.
 
 1. Create the <span class="qboot">Q1 BOOT</span> USB:
-    1. Boot the SETUP 1 computer from the <span class="setupboot">SETUP 1 BOOT</span> USB.
+    1. Boot the SETUP 1 computer from the <span class="setupboot">SETUP 1 BOOT</span> USB:
         1. Reboot the computer.
         1. Press your laptop's key sequence to bring up the boot device
         selection menu. (Some PCs may offer a boot device selection menu;
@@ -314,7 +312,7 @@ copy there.
             Option (⌥)**.
 {% endif %}
 
-        1. Select the proper device to boot from.
+        1. Select the proper device to boot from:
             1. **PC**: Varies by manufacturer; option will often say "USB"
             and/or "UEFI".
                 1. On the recommended Dell laptop, select "USB1" under "UEFI
@@ -328,18 +326,17 @@ copy there.
                 one identical "EFI boot" option is shown, you may need to guess
                 and reboot if you pick the wrong one.
 {% endif %}
-        1. Some laptops don't have a boot device selection menu, and you need to go into the BIOS configuration and change the boot order so that the USB drive is first.
-            1. On the recommended Acer laptop:
-                1. Press F2 while booting to enter BIOS configuration.
-                1. Navigate to the Boot menu.
-                1. Select USB HDD, and press F6 until it is at the top of the list.
-                1. Press F10 to save and automatically reboot from the USB.
-        1. If the computer boots into its regular OS rather than presenting you
+        1. Some laptops don't have a boot device selection menu, and you need to go into the BIOS configuration and change the boot order so that the USB drive is first. On the recommended Acer laptop:
+             1. Press F2 while booting to enter BIOS configuration.
+             1. Navigate to the Boot menu.
+             1. Select USB HDD, and press F6 until it is at the top of the list.
+             1. Press F10 to save and automatically reboot from the USB.
+        2. If the computer boots into its regular OS rather than presenting you
         with a boot device or BIOS configuration screen, you probably pressed
         the wrong button, or waited too long.
             1. Hold down your laptop's power button for 10 seconds. (The
               screen may turn black sooner than that; keep holding it down.)
-            1. Turn the laptop back on and try again. Spam the appropriate
+            2. Turn the laptop back on and try again. Spam the appropriate
             button(s) repeatedly as it boots.
             1. If the computer boots *immediately* to where it left off, you
             probably didn't hold down the power button long enough.
@@ -349,7 +346,7 @@ copy there.
 
     1. Enable WiFi connectivity.
         1. Click the cone-shaped WiFi icon near the right side of the menu bar.
-        1. If the dropdown says "No network devices available" at the top, you need to enable your networking drivers:
+        2. If the dropdown says "No network devices available" at the top, you need to enable your networking drivers:
             1. Click on "System Settings". It's the gear-and-wrench icon along
             the left side of the screen.
             1. A System Settings window will appear. Click the "Software &
@@ -361,10 +358,10 @@ copy there.
             will be selected. Select any other option besides "Do not use the
             device."
             1. Click "Apply Changes".
-            1. Click the cone-shaped WiFi icon near the right side of the menu
+            2. Click the cone-shaped WiFi icon near the right side of the menu
             bar again. There should be a list of WiFi networks this time.
-        1. Select your WiFi network from the list and enter the password.
-    1. Repeat steps 1-7 using the SETUP 1 computer to create the <span class="qboot">Q1 BOOT</span> USB
+        3. Select your WiFi network from the list and enter the password.
+    2. Repeat steps 1-6 using the SETUP 1 computer to create the <span class="qboot">Q1 BOOT</span> USB
     rather than the <span class="setupboot">SETUP 1 BOOT</span> USB.
         1. **The instruction to plug a Quarantined Boot USB into your Setup
         computer should raise a red flag for you, because <span style="color: red;">you should never
@@ -375,11 +372,11 @@ copy there.
         1. Because you have booted the SETUP 1 computer off the <span class="setupboot">SETUP 1 BOOT</span>
         USB, you will follow the instructions for Ubuntu, even if your computer
         normally runs Windows or macOS.
-        1. Immediately after you are finished executing steps 1-7 with the <span class="qboot">Q1 BOOT</span> USB, remove the <span class="qboot">Q1 BOOT</span> USB from the SETUP 1 computer.
+        1. Immediately after you are finished executing steps 1-6 with the <span class="qboot">Q1 BOOT</span> USB, remove the <span class="qboot">Q1 BOOT</span> USB from the SETUP 1 computer:
             1. On your desktop, right-click the corresponding USB drive icon
             in your dock and select Eject from the pop-up menu.
             1. Remove the USB drive from the USB slot.
-        1. **The <span class="qboot">Q1 BOOT</span> USB is now eternally quarantined. It should never again
+        2. **The <span class="qboot">Q1 BOOT</span> USB is now eternally quarantined. It should never again
         be plugged into anything besides the Q1 computer.**
 1. Create the <span class="setupboot">SETUP 2 BOOT</span> USB and <span class="qboot">Q2 BOOT</span> USB
-    1. Repeat steps 1-8 using the SETUP 2 computer, <span class="setupboot">SETUP 2 BOOT</span> USB, and <span class="qboot">Q2 BOOT</span> USB.
+    1. Repeat steps 1-7 using the SETUP 2 computer, <span class="setupboot">SETUP 2 BOOT</span> USB, and <span class="qboot">Q2 BOOT</span> USB.

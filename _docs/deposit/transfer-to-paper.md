@@ -2,7 +2,7 @@
 title: Transfer Cold Storage Data To Paper
 ---
 
-In this section, you'll move the cold storage data you generated in [Section I](../../deposit/generate-cold-storage-data/) of the Deposit Protocol from the quarantined computing environments onto physical paper. This will be
+In this section, you'll move the cold storage data you generated in [Section I of the Deposit Protocol](../../deposit/generate-cold-storage-data/) from the quarantined computing environments onto physical paper. This will be
 done using a combination hand transcription and
 [QR codes](https://en.wikipedia.org/wiki/QR_code).
 
@@ -72,9 +72,7 @@ done using a combination hand transcription and
        ```
 1. QR reader setup:
     1. Remove a smartphone from the Faraday bag and turn it on.
-    1. If the smartphone doesn't already have a QR code reader on it, install one.
-
-    Any reader is fine as long as it can read all types of QR codes, but
+    1. If the smartphone doesn't already have a QR code reader on it, install one. Any reader is fine as long as it can read all types of QR codes, but
     here are recommendations we've tested with Glacier:
     [iOS](https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609?mt=8),
     [Android](https://play.google.com/store/apps/details?id=com.application_4u.qrcode.barcode.scanner.reader.flashlight&hl=en).
@@ -137,12 +135,12 @@ when they absolutely need to be.
         such as a "Secure Note" in [1Password](https://1password.com/) or a comparable password
         manager. Because the Cold Storage Information Page contains
         moderately-sensitive data, there are some privacy considerations with keeping and
-        electronic copy of it. See the Sensitive Data subsection for details.
+        electronic copy of it. See the [Sensitive Data subsection of the Preface](../../preparation/preface/) for details.
     1. Print *N* copies of the
         <span class="warning">Cold Storage Information Page</span>.
     1. Shut down the computer. (It has a camera, and you will be working with
         critically sensitive data in a moment.)
-1. Prepare <span class="danger">Cold Storage Information Packets</span>
+1. Prepare <span class="danger">Cold Storage Information Packets</span>:
     1. Put each <span class="danger">handwritten private key page</span> along
     with one <span class="warning">Cold Storage Information Page</span> in its own
     opaque envelope. While this obviously won't deter a determined

@@ -19,10 +19,10 @@ Privacy Considerations subsection for details.)
 1. Verify cold storage address.
     1. Get one of the paper
     <span class="warning">Cold Storage Information Pages</span> containing
-    your cold storage address.
+    your <span class="warning">cold storage address</span>.
     1. Open your electronic copy of the
     <span class="warning">Cold Storage Information Page</span>
-    (see [Section II](../../deposit/transfer-to-paper/) of the Deposit Protocol for details).
+    (see [Section II of the Deposit Protocol](../../deposit/transfer-to-paper/) for details).
     If you've lost access to it, you'll need to recreate a new electronic
     copy by transcribing one of the hardcopies (attached to each public key)
     by hand.
@@ -52,8 +52,8 @@ Privacy Considerations subsection for details.)
     Storage Information Page. <span style="color: red;">If you use the wrong address, you will lose all
     of your funds with no recourse.</span>**
     1. Execute the transaction.
-1. Verify the deposit on the public blockchain.
-    1. Go to https://blockstream.info/, paste the address into the search bar, and press Enter.
+1. Verify the deposit on the public blockchain:
+    1. Go to [Blockstream](https://blockstream.info/), paste the address into the search bar, and press Enter.
     You'll be taken to a page that says "Address" at the top, with your
     <span class="warning">cold storage address</span> listed underneath.
     1. Within a couple of seconds you should be able to refresh this page and see your

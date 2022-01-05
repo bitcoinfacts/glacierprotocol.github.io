@@ -8,7 +8,7 @@ quarantined environments (for execution in the following section).
 
 1. Execute [Section VI of the Setup Protocol](../../setup/quarantined-workspace/)
 to prepare your quarantined workspace.
-1. Construct the withdrawal transaction.
+1. Construct the withdrawal transaction:
 
    **On the Q1 computer:**
     1. Import QR code data:
@@ -19,7 +19,7 @@ to prepare your quarantined workspace.
             ```
             A window will appear with your laptop's video feed.
 
-        1. For each QR code you printed out in [Section I](../../withdrawal/preparation/) of the Withdrawal Protocol:
+        1. For each QR code you printed out in [Section I of the Withdrawal Protocol](../../withdrawal/preparation/):
             1. Hold the QR code up to the webcam.
             1. When a green square appears around the QR code on the video
             feed, it has been successfully read.

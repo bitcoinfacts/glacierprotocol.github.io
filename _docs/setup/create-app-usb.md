@@ -4,20 +4,20 @@ title: Create App USBs
 
 We will prepare two (2) "Quarantined App USB"
 drives with the software needed to execute the remainder of the protocol.
-These are the USB drives you labeled <span class="qapp">Q1 APP</span> and <span class="qapp">Q2 APP</span> in [Section III](../../setup/quarantined-hardware/) of the Setup Protocol.
+These are the USB drives you labeled <span class="qapp">Q1 APP</span> and <span class="qapp">Q2 APP</span> in [Section III of the Setup Protocol](../../setup/quarantined-hardware/).
 
 1. Boot the SETUP 1 computer off the <span class="setupboot">SETUP 1 BOOT</span> USB if it is not
-already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of the Setup Protocol for details.)
+already. (See the instructions in [Section IV of the Setup Protocol](../../setup/create-boot-usb/) for details.)
 1. Insert the <span class="qapp">Q1 APP</span> USB into the the SETUP 1 computer.
 
-    1. **The instruction to plug a Quarantined App USB into your Setup computer
+    **The instruction to plug a Quarantined App USB into your Setup computer
     *should* raise a red flag for you, because <span style="color: red;">you should never plug a quarantined
     USB into anything other than the quarantined computer it is designated for!</span>**
 
-       This setup process is the ONE exception.
+    This setup process is the ONE exception.
 
 1. Press Ctrl-Alt-T to open a terminal window.
-1. Install the Glacier document and GlacierScript on the <span class="qapp">Q1 APP</span> USB.
+1. Install the Glacier document and GlacierScript on the <span class="qapp">Q1 APP</span> USB:
 
     1. Download the latest full release of Glacier (*not* just the protocol
     document) at
@@ -25,9 +25,7 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
     1. Unpack the Glacier ZIP file into a staging area:
 
         1. When the download starts, Firefox will ask you if you want to open the
-        ZIP file with Archive Manager. Click OK.
-
-           When the ZIP file download completes, it will be opened with Archive Manager.
+        ZIP file with Archive Manager. Click OK. When the ZIP file download completes, it will be opened with Archive Manager.
 
         1. There will be a single entry in a list named
         "GlacierProtocol-<span class="primary">version-here</span>", where
@@ -100,8 +98,7 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
         side of the screen.
         1. Find the "glacier" folder under "Home".
         1. Click and drag the glacier folder to the icon representing the USB
-        drive on the left. The USB drive will look like this, but may have a
-        different name:
+        drive on the left.
         1. If you see an "Error while copying" pop-up, you may be suffering from
         [this Ubuntu bug](https://bugs.launchpad.net/ubuntu/+source/nautilus/+bug/1021375).
         To fix it, do the following and then retry copying the files:
@@ -152,7 +149,7 @@ already. (See the instructions in [Section IV](../../setup/create-boot-usb/) of 
         $ wget https://bitcoincore.org/bin/bitcoin-core-22.0/SHA256SUMS
         $ wget https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0-x86_64-linux-gnu.tar.gz
         ```
-    Then drag the `~/bitcoin` folder to the <span class="qapp">Q1 APP</span> USB.
+    Then drag the "bitcoin" folder to the <span class="qapp">Q1 APP</span> USB.
 1. Click on the USB drive icon to verify that it has the correct files. The
 contents should look like this:
     ```

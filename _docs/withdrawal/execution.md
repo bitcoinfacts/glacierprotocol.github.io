@@ -27,7 +27,7 @@ yourself from your smartphone previously.
     <span class="warning">transaction ID</span> in it. This is the
     <span class="warning">transaction ID</span> for your withdrawal; make a
     note of it.
-1. Verify the withdrawal on the public blockchain.
+1. Verify the withdrawal on the public blockchain:
     1. Go to [Blockstream](https://blockstream.info/) , paste
     the <span class="warning">destination address</span> into the search bar,
     and press Enter. You'll be taken to a page that says "Address" at

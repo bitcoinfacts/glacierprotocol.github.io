@@ -28,9 +28,9 @@ On any Internet-connected computer:
     of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
 1. Open your electronic copy of the
 <span class="warning">Cold Storage Information Page</span>
-(see [Section II](../../deposit/transfer-to-paper/) of the Deposit Protocol for details).
+(see [Section II of the Deposit Protocol](../../deposit/transfer-to-paper/) for details).
 1. Identify the blockchain transactions associated with the funds you'd like
-to withdraw.  
+to withdraw:
     1. If you have you have your own Bitcoin node, such as [Umbrel](https://getumbrel.com/):  
         1. SSH to it:
         ```
@@ -43,7 +43,7 @@ to withdraw.
 
         1. It will take 1-2 minutes to complete. It will list all unspent transactions for the given address.
     1. If you don't have your own Bitcoin node:
-        1. Go to [Blockstream.info](https://blockstream.info/), paste your
+        1. Go to [Blockstream](https://blockstream.info/), paste your
         <span class="warning">cold storage address</span> into the search bar,
         and press Enter.
         1. You'll be taken to a page that says "Bitcoin Address" at the top, with
@@ -57,21 +57,20 @@ to withdraw.
         If you're taken to a page that says "No free outputs to spend", this
         indicates a zero balance at the address. Verify you pasted the address
         correctly.
-    1. Identify a set of <span class="warning">transaction IDs</span> whose amounts are **cumulatively**
+    2. Identify a set of <span class="warning">transaction IDs</span> whose amounts are **cumulatively**
     greater than or equal to the amount you would like to withdraw.
     If a transaction ID is listed more than once (i.e. the same transaction
     has more than one unspent output going to your cold storage address), you
     just need to include the transaction ID once. GlacierScript will include
     all UTXOs in every supplied transaction ID.
     1. Copy-paste these <span class="warning">transaction IDs</span> to a temporary scratchpad for
-    reference.
-    1. These will be referred to as **<span class="warning">unspent transaction IDs</span>**.
-1. Get raw data for blockchain transactions.
+    reference. These will be referred to as **<span class="warning">unspent transaction IDs</span>**.
+1. Get raw data for blockchain transactions:
     1. For each <span class="warning">unspent transaction ID</span> from your
     temporary scratchpad:
         1. If you have your own Bitcoin node, run:
-        <pre>~/umbrel/bin/bitcoin-cli getrawtransaction <span class="primary">transaction-id-here</span></pre>
-        1. otherwise, go to the following URL, substituting the unspent transaction ID in
+            <pre>~/umbrel/bin/bitcoin-cli getrawtransaction <span class="primary">transaction-id-here</span></pre>
+        1. Otherwise, go to the following URL, substituting the unspent transaction ID in
         the specified place:
            [https://blockchain.info/rawtx/<span class="primary">transaction-id-here</span>?format=hex](https://blockchain.info/rawtx/transaction-id-here?format=hex)
 
@@ -89,9 +88,9 @@ to withdraw.
    1. Copy-paste the <span class="warning">raw unspent transaction</span>
    next to the unspent <span class="warning">transaction ID</span> in
    your temporary scratchpad.
-1. Create QR codes
+2. Create QR codes:
     1. Find an online QR code generator, such as <http://goqr.me>.
-    1. For each unspent <span class="warning">transaction ID</span> in your
+    2. For each unspent <span class="warning">transaction ID</span> in your
     temporary scratchpad:
         1. Copy-paste the <span class="warning">raw unspent transaction</span>
         into the QR code generator.
@@ -110,22 +109,22 @@ to withdraw.
 
         1. Print out the resulting <span class="warning"> QR code</span>. (If
           printing from goqr.me, just print the first page.)
-        1. Write "raw unspent transaction" somewhere on the printout.
+        2. Write "raw unspent transaction" somewhere on the printout.
     1. Repeat step (b) above for other needed information:
-        1. Cold storage address (from the <span class="warning">Cold Storage Information Page</span>)
-        1. Redemption script (from the <span class="warning">Cold Storage Information Page</span>)
-        1. <span class="warning">Destination address</span> to which you will be withdrawing the funds
+        1. <span class="warning">Cold storage address</span> (from the <span class="warning">Cold Storage Information Page</span>)
+        2. Redemption script (from the <span class="warning">Cold Storage Information Page</span>)
+        3. <span class="warning">Destination address</span> to which you will be withdrawing the funds:
             1. **Carefully** transcribe the destination address by hand on the printed page with its QR code. (This will facilitate verification in the quarantined environment.)
-            1. Double-check that the transcribed address is correct.
-            1. If you are sending funds directly to another party with whom you do *not* have high trust, be mindful of the risk of transaction malleability fraud.
-1. Gather other information.
+            2. Double-check that the transcribed address is correct.
+            3. If you are sending funds directly to another party with whom you do *not* have high trust, be mindful of the risk of transaction malleability fraud.
+3. Gather other information:
     1. Make sure you have the necessary number of <span class="danger">Cold Storage Information Packets</span> on hand (you'll need the private keys).
         1. For the recommended 2-of-n multisignature withdrawal policy,
         you'll need any 2
         <span class="danger">Cold Storage Information Packets</span>.
         1. If you are performing an initial test withdrawal, you'll need *all*
         <span class="danger">Cold Storage Information packets</span>.
-    1. Get transaction fee market data.
+    2. Get transaction fee market data:
 
         The operators of the Bitcoin network require a (very small) fee for
         processing transactions. There is not a fixed fee schedule; if the fee
@@ -143,7 +142,7 @@ to withdraw.
         1. If you are running a Bitcoin Core full node, you can run `bitcoin-cli estimatesmartfee 6`
         This returns a fee rate in BTC/kB; multiply the result by 100,000 to get satoshis / byte.
 
-        Otherwise, use a service listed at <https://b10c.me/A-list-of-public-feerate-estimator-APIs/>
+        1. Otherwise, use a service listed at <https://b10c.me/A-list-of-public-feerate-estimator-APIs/>
 
         1. Write the fee estimate corresponding to your desired confirmation time on a piece of paper
         labeled "Fee rate." Round up to the nearest whole number in units of satoshis / byte.
