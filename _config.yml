@@ -5,7 +5,7 @@ show_dir_listing: false
 permalink: pretty
 url: "https://bitcoinfacts.github.io/glacierprotocol.github.io/"
 timezone: America/Los_Angeles
-platform: linuxOnly # to generate Linux only PDF, set to: linuxOnly
+platform: all # to generate Linux only PDF, set to: linuxOnly
 
 # Set this if the repo is for a project, e.g
 # "/glacier" -> https://gh-user.github.io/glacier

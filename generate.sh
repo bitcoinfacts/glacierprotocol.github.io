@@ -11,7 +11,10 @@
 # root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier-linux-only.pdf
 # 4. In _config.yml, set "platform" to: "all" and save
 # 5. Run: root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier.pdf
-# 6. git commit, then git push
+# 6. git commit -m "you message"
+# 7. git push bitcoinfacts master
+# 8. git tag ...
+# 9. Create a release in GitHub
 set -e
 rm $1
 echo "Deleted old PDF: $1"
