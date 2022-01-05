@@ -1,20 +1,32 @@
 #!/bin/bash
 # TODO: simplify these steps
 # This script automates the steps of generating and signing a new version of the Glacier.pdf or Glacier-linux-only.pdf
-# 1. First, run these commands:
-#   make stop-site
-#   make
-#   rm ./assets/glacier.pdf
-#   make pdf
-# 2. In _config.yml, set "platform" to: "linuxOnly" and save
-# 3. Run this script from the GlacierProtocol directory:
+# 1. Stop the webiste:
+# make stop-site
+# 2. Delete the existing PDF:
+# rm ./assets/glacier.pdf
+# 3. In _config.yml, set "platform" to: "linuxOnly" and save
+# 4. Start the  website:
+# make
+# 5. Generate the linux-only PDF:
+# make pdf
+# 6. Run this script from the GlacierProtocol directory:
 # root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier-linux-only.pdf
-# 4. In _config.yml, set "platform" to: "all" and save
-# 5. Run: root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier.pdf
-# 6. git commit -m "you message"
-# 7. git push bitcoinfacts master
-# 8. git tag ...
-# 9. Create a release in GitHub
+# 7. Stop the webiste:
+# make stop-site
+# 8. Delete the existing PDF:
+# rm ./assets/glacier.pdf
+# 9. In _config.yml, set "platform" to: "all" and save
+# 10. Start the  website:
+# make
+# 11. Generate the linux-only PDF:
+# make pdf
+# 12. Run this script from the GlacierProtocol directory:
+# root@Ubuntu:~/GlacierProtocol# ../glacierprotocol.github.io/generate.sh Glacier.pdf
+# 13. git commit -m "you message"
+# 14. git push bitcoinfacts master
+# 15. git tag ...
+# 16. Create a release in GitHub
 set -e
 rm $1
 echo "Deleted old PDF: $1"
