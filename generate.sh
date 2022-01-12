@@ -7,9 +7,9 @@
 # rm ./assets/glacier.pdf
 # 3. In _config.yml, set "platform" to: "linuxOnly" and save
 # 4. Start the  website:
-# make
+# $ make
 # 5. Generate the linux-only PDF:
-# make pdf
+# $ make pdf
 # 6. Run this script from the GlacierProtocol directory:
 # $ cd ~/GlacierProtocol
 # $ ../glacierprotocol.github.io/generate.sh Glacier-linux-only.pdf
@@ -20,18 +20,22 @@
 # rm ./assets/glacier.pdf
 # 9. In _config.yml, set "platform" to: "all" and save
 # 10. Start the  website:
-# make
+# $ make
 # 11. Generate the linux-only PDF:
-# make pdf
+# $ make pdf
 # 12. Run this script from the GlacierProtocol directory:
 # $ cd ~/GlacierProtocol
 # $ ../glacierprotocol.github.io/generate.sh Glacier.pdf
+# 13. Push:
 # $ cd ../glacierprotocol.github.io
-# 13. git commit -m "you message"
-# 14. git push bitcoinfacts master
-# 15. git tag v...
-# 16. git push bitcoinfacts --tags
-# 17. Create a release in GitHub
+# $ git commit -m "you message"
+# $ git push bitcoinfacts master
+# $ cd ../GlacierProtocol
+# $ git commit -m "you message"
+# $ git push bitcoinfacts master
+# $ git tag v...
+# $ git push bitcoinfacts --tags
+# $ Create a release in GitHub
 set -e
 rm $1
 echo "Deleted old PDF: $1"
