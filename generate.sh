@@ -17,7 +17,7 @@
 # $ cd ~/glacierprotocol.github.io
 # $ make stop-site
 # 8. Delete the existing PDF:
-# rm ./assets/glacier.pdf
+# $ rm ./assets/glacier.pdf
 # 9. In _config.yml, set "platform" to: "all" and save
 # 10. Start the  website:
 # $ make

@@ -3,7 +3,7 @@ description: The step-by-step protocol for storing bitcoins in a highly secure w
 incremental: true
 show_dir_listing: false
 permalink: pretty
-url: "https://bitcoinfacts.github.io/glacierprotocol.github.io/"
+url: "https://www.glacierbf.org/"
 timezone: America/Los_Angeles
 platform: all # to generate Linux only PDF, set to: linuxOnly. Otherwise, set to: all
 

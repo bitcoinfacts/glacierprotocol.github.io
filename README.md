@@ -1,6 +1,6 @@
 # Glacier website
 
-This is the source of the website you see at https://bitcoinfacts.github.io/glacierprotocol.github.io/.
+This is the source of the website you see at https://www.glacierbf.org/.
 
 Glacier is a step-by-step protocol for storing bitcoins in a highly secure
 manner. It is intended for:
