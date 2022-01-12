@@ -11,7 +11,7 @@ You will need access to an electronic *and* paper copy of your
 
 1. Consider whether you want to route your funds through one or more
 intermediary non-cold-storage addresses for privacy purposes. (Review the
-Privacy Considerations subsection for details.)
+[Privacy Considerations](../../overview/overview/) subsection for details.)
 
    If you do, make those intermediate transfers using whatever means you
    normally use to transfer bitcoins.

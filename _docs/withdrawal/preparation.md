@@ -8,7 +8,7 @@ cold storage.
 
 Before beginning, consider whether you want to route your funds through one or
 more intermediary non-cold-storage addresses for privacy purposes. (Review the
-Privacy Considerations subsection for details.) If you do, you may want to
+[Privacy Considerations](../../overview/overview/) subsection for details.) If you do, you may want to
 withdraw the funds to an intermediary address *first* before sending them on to
 their final destination.
 
@@ -22,11 +22,10 @@ On any Internet-connected computer:
 1. If this is **not** your first time working with Glacier:
     1. Use a networked computer to access the latest full release of Glacier (
     not just the protocol document) at <https://github.com/bitcoinfacts/GlacierProtocol/releases/latest>.
-    1. Check the Release Notes of the protocol document to see if
-    there are any new versions of Glacier recommended.
+    1. Check the Release Notes to see if there are any new versions of Glacier recommended.
     1. Whether or not you decide to upgrade, review the errata for the version
     of Glacier you are using at <https://github.com/bitcoinfacts/GlacierProtocol/releases>.
-1. Open your electronic copy of the
+2. Open your electronic copy of the
 <span class="warning">Cold Storage Information Page</span>
 (see [Section II of the Deposit Protocol](../../deposit/transfer-to-paper/) for details).
 1. Identify the blockchain transactions associated with the funds you'd like
@@ -46,18 +45,17 @@ to withdraw:
         1. Go to [Blockstream](https://blockstream.info/), paste your
         <span class="warning">cold storage address</span> into the search bar,
         and press Enter.
-        1. You'll be taken to a page that says "Bitcoin Address" at the top, with
+        1. You'll be taken to a page that says "Address" at the top, with
         your <span class="warning">cold storage address</span> listed underneath.
-        1. Click the "Unspent Outputs" link. The page will show a list of
+        1. Below that, the page will show a list of
         **<span class="warning">transaction IDs</span>**
-        (in horizontal gray bars) and their corresponding **amounts** (in green boxes).
+        (on the left) and their corresponding **amounts** (on the right).
         Each <span class="warning">transaction ID</span> corresponds to a deposit
         you made, the remainder of a deposit you made after doing a partial
         withdrawal, or a deposit someone else made to your cold storage address.
-        If you're taken to a page that says "No free outputs to spend", this
-        indicates a zero balance at the address. Verify you pasted the address
-        correctly.
-    2. Identify a set of <span class="warning">transaction IDs</span> whose amounts are **cumulatively**
+        1. For each transaction, click on the "Details" button to determine whether
+        the transaction has some unspent amount (the "Spending Tx" field will be shown as "Unspent").
+    2. Identify a set of <span class="warning">transaction IDs</span> whose unspent amounts are **cumulatively**
     greater than or equal to the amount you would like to withdraw.
     If a transaction ID is listed more than once (i.e. the same transaction
     has more than one unspent output going to your cold storage address), you
@@ -69,8 +67,8 @@ to withdraw:
     1. For each <span class="warning">unspent transaction ID</span> from your
     temporary scratchpad:
         1. If you have your own Bitcoin node, run:
-            <pre>~/umbrel/bin/bitcoin-cli getrawtransaction <span class="primary">transaction-id-here</span></pre>
-        1. Otherwise, go to the following URL, substituting the unspent transaction ID in
+            <pre>$ ~/umbrel/bin/bitcoin-cli getrawtransaction <span class="primary">transaction-id-here</span></pre>
+        2. Otherwise, go to the following URL, substituting the unspent transaction ID in
         the specified place:
            [https://blockchain.info/rawtx/<span class="primary">transaction-id-here</span>?format=hex](https://blockchain.info/rawtx/transaction-id-here?format=hex)
 
@@ -139,10 +137,13 @@ to withdraw:
         As of late 2019, between 1 and 100 satoshis / byte is typical. **If the number is
         radically higher than 100 or less than 1, stop; something may be wrong.** Seek assistance.
 
-        1. If you are running a Bitcoin Core full node, you can run `bitcoin-cli estimatesmartfee 6`
+        1. If you are running a Bitcoin Core full node, you can run:
+        ```
+        $ bitcoin-cli estimatesmartfee 6
+        ```
         This returns a fee rate in BTC/kB; multiply the result by 100,000 to get satoshis / byte.
 
         1. Otherwise, use a service listed at <https://b10c.me/A-list-of-public-feerate-estimator-APIs/>
 
-        1. Write the fee estimate corresponding to your desired confirmation time on a piece of paper
+        2. Write the fee estimate corresponding to your desired confirmation time on a piece of paper
         labeled "Fee rate." Round up to the nearest whole number in units of satoshis / byte.

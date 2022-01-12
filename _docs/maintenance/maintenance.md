@@ -24,7 +24,7 @@ initial deposit into cold storage, and **annually** thereafter.
 1. Execute the Viewing Protocol to view the balance of the
 <span class="warning">cold storage address</span> and ensure that it is as
 expected.
-1. Check for Glacier security upgrades
+1. Check for Glacier security upgrades:
     1. Access the latest full release of Glacier (*not* just the protocol
     document) at
     [https://github.com/bitcoinfacts/GlacierProtocol/releases/latest](https://github.com/bitcoinfacts/GlacierProtocol/releases/latest).

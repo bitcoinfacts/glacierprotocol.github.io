@@ -51,6 +51,6 @@
   docs:
   - contribute/license
   - contribute/acknowledgments
-- title: Design Documents
+- title: Design Document
   docs:
   - design-doc/overview

@@ -5,7 +5,7 @@ show_dir_listing: false
 permalink: pretty
 url: "https://bitcoinfacts.github.io/glacierprotocol.github.io/"
 timezone: America/Los_Angeles
-platform: all # to generate Linux only PDF, set to: linuxOnly
+platform: all # to generate Linux only PDF, set to: linuxOnly. Otherwise, set to: all
 
 # Set this if the repo is for a project, e.g
 # "/glacier" -> https://gh-user.github.io/glacier
@@ -17,7 +17,7 @@ exclude: [".git", ".gitignore", "_build", "dockerfiles", "Makefile", "README.md"
 # Urls to social networks
 git_address: https://github.com/bitcoinfacts/glacierprotocol.github.io
 git_edit_address: https://github.com/bitcoinfacts/glacierprotocol.github.io/edit/master
-twitter_address: https://twitter.com/glacierprotocol
+twitter_address: https://twitter.com/glacier_bf
 gitter_address: https://gitter.im/glacierprotocol/lobby
 
 # Google Analytics

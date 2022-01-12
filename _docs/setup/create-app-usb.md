@@ -46,7 +46,7 @@ already. (See the instructions in [Section IV of the Setup Protocol](../../setup
         has changed (or that this warning has been removed), there is a
         security risk.** Stop and seek assistance.
 
-        1. Access bitcoinfacts's Keybase profile at <https://keybase.io/bitcoinfacts>.
+        1. Access BitcoinFacts's Keybase profile at <https://keybase.io/bitcoinfacts>.
         1. Click the string of letters and numbers next to the key icon.
         1. In the pop-up that appears, locate the link reading "this key".
         1. Right-click the link and select "Save Link As..."
