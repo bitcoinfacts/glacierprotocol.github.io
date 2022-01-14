@@ -133,7 +133,10 @@ already. (See the instructions in [Section IV of the Setup Protocol](../../setup
         computers
             ```
             $ cd ~/apps
-            $ apt download qrencode=4.1.1-1 zbar-tools=0.23.90-1
+            $ apt download libqrencode3=3.4.4-1
+            $ apt download libzbar0=0.10+doc-10ubuntu1
+            $ apt download qrencode=3.4.4-1
+            $ apt download zbar-tools=0.10+doc-10ubuntu1
             ```
     1.  Copy the contents of the apps folder to the <span class="qapp">Q1 APP</span> USB:
         1. Click on the File Manager icon in the launching dock:
@@ -164,8 +167,10 @@ contents should look like this:
     version.
 
     ```
-    qrencode_4.1.1-1_amd64.deb
-    zbar-tools_0.23.90-1_amd64.deb
+    qrencode_3.4.4-1_amd64.deb
+    libqrencode3_3.4.4-1_amd64.deb
+    zbar-tools_0.10+doc-10ubuntu1_amd64.deb
+    libzbar0_0.10+doc-10ubuntu1_amd64.deb
     ```
 
     Click the `bitcoin` folder. It will have the following content:
