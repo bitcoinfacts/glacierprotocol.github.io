@@ -28,6 +28,7 @@
 # $ ../glacierprotocol.github.io/generate.sh Glacier.pdf
 # 13. Push:
 # $ cd ../glacierprotocol.github.io
+# $ git add -A
 # $ git commit -m "you message"
 # $ git push bitcoinfacts master
 # $ cd ../GlacierProtocol

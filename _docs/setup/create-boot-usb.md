@@ -219,8 +219,9 @@ copy there.
                 ```
             1. Verify the integrity of the USB:
                 <pre>
-                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desktop-amd64.iso`
-                ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
+                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desk
+                top-amd64.iso` ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-dev
+                ice-identifier-here</span></pre>
             1. If prompted for a password, enter the computer's root password.
             1. Wait a few minutes for the verification process to complete.
             1. If all goes well, the command will output no data, returning to
@@ -279,8 +280,9 @@ copy there.
                 ```
             1. Verify the integrity of the USB:
                 <pre>
-                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desktop-amd64.iso`
-                ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-device-identifier-here</span></pre>
+                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desk
+                top-amd64.iso` ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-dev
+                ice-identifier-here</span></pre>
             1. If prompted for a password, enter the computer's root password.
             1. Wait a few minutes for the verification process to complete.
             1. If all goes well, the command will output no data, returning to
