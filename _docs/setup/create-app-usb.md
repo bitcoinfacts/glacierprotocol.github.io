@@ -210,7 +210,6 @@ contents should look like this:
     LICENSE
     Glacier.pdf
     Glacier-linux-only.pdf
-    .gitignore
     ```
 1. Eject and physically remove the <span class="qapp">Q1 APP</span> USB from the SETUP 1 computer.
 
