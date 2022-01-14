@@ -68,7 +68,7 @@ copy there.
     1. The following fingerprint should be displayed:
 
         ```
-        f8d3ab0faeaecb5d26628ae1aa21c9a13e0a242c381aa08157db8624d574b830
+        dc7dee086faabc9553d5ff8ff1b490a7f85c379f49de20c076f11fb6ac7c0f34
         ```
 
         It's not important to check every single character when visually
