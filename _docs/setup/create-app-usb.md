@@ -167,10 +167,10 @@ contents should look like this:
     version.
 
     ```
-    qrencode_3.4.4-1_amd64.deb
-    libqrencode3_3.4.4-1_amd64.deb
-    zbar-tools_0.10+doc-10ubuntu1_amd64.deb
-    libzbar0_0.10+doc-10ubuntu1_amd64.deb
+    libqrencode3_3.4.4-1build1_amd64.deb
+    libzbar0_0.10+doc-10.1build2_amd64.deb
+    qrencode_3.4.4-1build1_amd64.deb
+    zbar-tools_0.10+doc-10.1build2_amd64.deb
     ```
 
     Click the `bitcoin` folder. It will have the following content:
