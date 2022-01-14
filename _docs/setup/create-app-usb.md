@@ -131,13 +131,30 @@ already. (See the instructions in [Section IV of the Setup Protocol](../../setup
         computers
         * **zbar-tools**: Used for reading QR codes to import data into quarantined
         computers
-            ```
-            $ cd ~/apps
-            $ apt download libqrencode3=3.4.4-1build1
-            $ apt download libzbar0=0.10+doc-10.1build2
-            $ apt download qrencode=3.4.4-1build1
-            $ apt download zbar-tools=0.10+doc-10.1build2
-            ```
+        ```
+        $ cd ~/apps
+        $ apt download libqrencode3=3.4.4-1build1
+        $ apt download libzbar0=0.10+doc-10.1build2
+        $ apt download qrencode=3.4.4-1build1
+        $ apt download zbar-tools=0.10+doc-10.1build2
+        ```
+    1. View the fingerprints of the files:
+        {% if site.platform != "linuxOnly" %}
+        1. **Windows**: `> Get-FileHash -a sha256 *.*`
+        1. **macOS**: `$ shasum -a 256 *.*`{% endif %}
+        1. **Linux**: `$ sha256sum *.*`
+
+    1. The following fingerprints should be displayed:
+
+        ```
+        e2815703e5ed29f47a8434fbc23535b7bdd938e4483c925bfbc92414f2715d56  libqrencode3_3.4.4-1build1_amd64.deb
+        0e11e3adc2a0abaa33130c06404da94488a015a1cc90752ea82807f836e671e0  libzbar0_0.10+doc-10.1build2_amd64.deb
+        7b46f0f4d2a985f7130c14902b1cbfae1b26558d2609f4b38e4196d6321fe18c  qrencode_3.4.4-1build1_amd64.deb
+        a0fe2d5eec20b8d744ecbedc311b44040e2fae6b9927291862d774752aed4d83  zbar-tools_0.10+doc-10.1build2_amd64.deb
+        ```
+        It's not important to check every single character when visually
+        verifying a fingerprint. It's sufficient to check the **first 8
+        characters, last 8 characters, and a few somewhere in the middle.**
     1.  Copy the contents of the apps folder to the <span class="qapp">Q1 APP</span> USB:
         1. Click on the File Manager icon in the launching dock:
         1. Navigate to the "Home" folder.
