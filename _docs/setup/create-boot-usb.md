@@ -46,7 +46,7 @@ copy there.
       1. **Linux**: `$ cd $HOME/Downloads`
 1. Download Ubuntu:
     ```
-    $ wget http://old-releases.ubuntu.com/releases/xenial/ubuntu-16.04.1-desktop-amd64.iso
+    $ wget https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso
     ```
     Wait until the download is complete.
 
@@ -61,14 +61,14 @@ copy there.
 
     1. View the fingerprint of the file:
 {% if site.platform != "linuxOnly" %}
-        1. **Windows**: `> Get-FileHash -a sha256 ubuntu-16.04.1-desktop-amd64.iso`
-        1. **macOS**: `$ shasum -a 256 ubuntu-16.04.1-desktop-amd64.iso`{% endif %}
-        1. **Linux**: `$ sha256sum ubuntu-16.04.1-desktop-amd64.iso`
+        1. **Windows**: `> Get-FileHash -a sha256 ubuntu-18.04.6-desktop-amd64.iso`
+        1. **macOS**: `$ shasum -a 256 ubuntu-18.04.6-desktop-amd64.iso`{% endif %}
+        1. **Linux**: `$ sha256sum ubuntu-18.04.6-desktop-amd64.iso`
 
     1. The following fingerprint should be displayed:
 
         ```
-        dc7dee086faabc9553d5ff8ff1b490a7f85c379f49de20c076f11fb6ac7c0f34
+        f730be589aa1ba923ebe6eca573fa66d09ba14c4c104da2c329df652d42aff11
         ```
 
         It's not important to check every single character when visually
@@ -81,7 +81,7 @@ copy there.
         security analysis, see the design document.
 
         You can verify this is the official Ubuntu fingerprint
-        [here](https://old-releases.ubuntu.com/releases/16.04.1/SHA256SUMS),
+        [here](https://old-releases.ubuntu.com/releases/18.04.6/SHA256SUMS),
         or follow Ubuntu's full verification process using this guide.
 
 1. Create the <span class="setupboot">SETUP 1 BOOT</span> USB:
@@ -96,7 +96,7 @@ copy there.
         1. Next to the text "Create a bootable disk using", select "ISO Image"
         in the dropdown.
         1. Click the CD icon next to the "ISO Image" dropdown.
-        1. A file explorer will pop up. Select `ubuntu-16.04.1-desktop-amd64.iso`
+        1. A file explorer will pop up. Select `ubuntu-18.04.6-desktop-amd64.iso`
         from your downloads folder and click Open.
         1. Click Start.
         1. If prompted to download Syslinux software, click "Yes".
@@ -108,7 +108,7 @@ copy there.
         1. Prepare the Ubuntu download for copying to the USB:
             ```
             $ cd $HOME/Downloads
-            $ hdiutil convert ubuntu-16.04.1-desktop-amd64.iso -format UDRW -o ubuntu-16.04.1-desktop-amd64.img
+            $ hdiutil convert ubuntu-18.04.6-desktop-amd64.iso -format UDRW -o ubuntu-18.04.6-desktop-amd64.img
             ```
         1. Determine the macOS "device identifier" for the Boot USB.
             1. `$ diskutil list`
@@ -133,12 +133,12 @@ copy there.
             device identifier; <span style="color: red;">using the wrong one could overwrite your hard
             drive!</span>**
                <pre>
-               $ sudo dd if=ubuntu-16.04.1-desktop-amd64.img.dmg \
+               $ sudo dd if=ubuntu-18.04.6-desktop-amd64.img.dmg \
                of=<span class="primary">USB-device-identifier-here</span> bs=1m
                </pre>
                Example:
                ```
-               $ sudo dd if=ubuntu-16.04.1-desktop-amd64.img.dmg of=/dev/disk2 bs=1m
+               $ sudo dd if=ubuntu-18.04.6-desktop-amd64.img.dmg of=/dev/disk2 bs=1m
                ```
             1. Enter your administrator password when requested.
             1. Wait several minutes for the copying process to complete. When
@@ -162,14 +162,14 @@ copy there.
                 ```
             1.  
                 ```
-                $ sudo cmp -n `stat -f '%z' ubuntu-16.04.1-desktop-amd64.img.dmg` ubuntu-16.04.1-desktop-amd64.img.dmg USB-device-identifier-here
+                $ sudo cmp -n `stat -f '%z' ubuntu-18.04.6-desktop-amd64.img.dmg` ubuntu-18.04.6-desktop-amd64.img.dmg USB-device-identifier-here
                 ```
             1. Wait a few minutes for the verification process to complete.
             1. If all goes well, the command will output no data, returning to
             your usual terminal prompt.
             1. If there is a discrepancy, you’ll see a message like:
                 ```
-                ubuntu-16.04.1-desktop-amd64.img.dmg /dev/disk2
+                ubuntu-18.04.6-desktop-amd64.img.dmg /dev/disk2
                 differ: byte 1, line 1
                 ```
                 If you see a message like this, STOP -- this may be a security
@@ -219,8 +219,8 @@ copy there.
                 ```
             1. Verify the integrity of the USB:
                 <pre>
-                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desk
-                top-amd64.iso` ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-dev
+                $ sudo cmp -n `stat -c '%s' ubuntu-18.04.6-desk
+                top-amd64.iso` ubuntu-18.04.6-desktop-amd64.iso <span class="primary">USB-dev
                 ice-identifier-here</span></pre>
             1. If prompted for a password, enter the computer's root password.
             1. Wait a few minutes for the verification process to complete.
@@ -228,7 +228,7 @@ copy there.
             your usual terminal prompt.
             1. If there is an issue, you'll see a message like:
                 ```
-                ubuntu-16.04.1-desktop-amd64.iso /dev/sda differ:
+                ubuntu-18.04.6-desktop-amd64.iso /dev/sda differ:
                 byte 1, line 1
                 ```
                 If you see a message like this, STOP -- this may be a security
@@ -261,7 +261,7 @@ copy there.
             device identifier; <span style="color: red;">using the wrong one could overwrite your hard
             drive!</span>**
                 ```
-                $ sudo dd if=ubuntu-16.04.1-desktop-amd64.iso of=/dev/sda bs=1M
+                $ sudo dd if=ubuntu-18.04.6-desktop-amd64.iso of=/dev/sda bs=1M
                 ```
         1. Verify the integrity of the <span class="setupboot">SETUP 1 BOOT</span> USB (i.e. no errors or malware infection):
             1. On your desktop, right-click the corresponding USB drive icon in
@@ -280,8 +280,8 @@ copy there.
                 ```
             1. Verify the integrity of the USB:
                 <pre>
-                $ sudo cmp -n `stat -c '%s' ubuntu-16.04.1-desk
-                top-amd64.iso` ubuntu-16.04.1-desktop-amd64.iso <span class="primary">USB-dev
+                $ sudo cmp -n `stat -c '%s' ubuntu-18.04.6-desk
+                top-amd64.iso` ubuntu-18.04.6-desktop-amd64.iso <span class="primary">USB-dev
                 ice-identifier-here</span></pre>
             1. If prompted for a password, enter the computer's root password.
             1. Wait a few minutes for the verification process to complete.
@@ -289,7 +289,7 @@ copy there.
             your usual terminal prompt.
             1. If there is an issue, you'll see a message like:
                 ```
-                ubuntu-16.04.1-desktop-amd64.iso /dev/sda differ:
+                ubuntu-18.04.6-desktop-amd64.iso /dev/sda differ:
                 byte 1, line 1
                 ```
                 If you see a message like this, STOP -- this may be a security

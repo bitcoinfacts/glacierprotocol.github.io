@@ -4,7 +4,7 @@
 # 1. Stop the webiste:
 # $ make stop-site
 # 2. Delete the existing PDF:
-# rm ./assets/glacier.pdf
+# $ rm ./assets/glacier.pdf
 # 3. In _config.yml, set "platform" to: "linuxOnly" and save
 # 4. Start the  website:
 # $ make
