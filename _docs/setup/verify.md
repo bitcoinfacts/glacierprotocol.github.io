@@ -27,7 +27,7 @@ folder within your downloads directory, do so.
 1. If you have used Glacier before, *and* you know you have the Glacier public key
 imported into a local GPG keyring, skip the next step. (If you don't know,
 that's fine; proceed as normal.)
-1. Obtain the Glacier "public key," used to cryptographically verify the protocol document.
+1. Obtain the Glacier "public key," used to cryptographically verify the protocol document:
   
     Technical details: Glacier's GPG keys are handled with good security practices. They were generated while booting off an Ubuntu Live USB on a factory-new laptop with the wireless card removed, and transferred via USB to a MacBook. The private key is not stored in the cloud. The public key is hosted separately from our software distributions, on Keybase, secured with separate credentials (all of which are in password managers).
 
@@ -56,7 +56,7 @@ that's fine; proceed as normal.)
     As..."
     1. Name the file "glacier.asc".
 {% if site.platform != "linuxOnly" %}
-1. Download and install [GnuPG](https://gnupg.org/), the software we'll use for doing the cryptographic verification. GnuPG is the same software recommended by the Electronic Frontier Foundation's Surveillance Self Defense protocol.
+1. Download and install [GnuPG](https://gnupg.org/), the software we'll use for doing the cryptographic verification. GnuPG is the same software recommended by the Electronic Frontier Foundation's Surveillance Self Defense protocol:
 
     Technical details: Note that we are foregoing verification of the integrity of
   GnuPG itself. Verification requires having access to a pre-existing, trusted
@@ -80,8 +80,7 @@ that's fine; proceed as normal.)
     1. **Windows**: Press Windows-R, type "powershell" and click OK.
     1. **macOS**: Click the Searchlight (magnifying glass) icon in the menu bar, and
     type a terminal window. "terminal". Select the Terminal application from the
-    search results.
-{% endif %}
+    search results.{% endif %}
     1. **Linux**: Varies; on Ubuntu, press Ctrl-Alt-T.
 
 1. Change the terminal window's active folder to your downloads folder. The
@@ -89,8 +88,7 @@ commands below are based on common default settings; if you put your downloads
 is in a different place, you will need to customize this command.
 {% if site.platform != "linuxOnly" %}
     1. **Windows**:  `> cd $HOME/Downloads/glacier`
-    1. **macOS**:  `$ cd $HOME/Downloads/glacier`
-{% endif %}
+    1. **macOS**:  `$ cd $HOME/Downloads/glacier`{% endif %}
     1. **Linux**: `$ cd $HOME/Downloads/glacier`
 
 1. Verify the integrity of the downloaded document. For technical background about this process, see <https://en.wikipedia.org/wiki/Digital_signature>.

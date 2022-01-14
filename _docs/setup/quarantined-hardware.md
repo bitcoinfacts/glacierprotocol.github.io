@@ -12,7 +12,7 @@ title: Prepare Quarantined Hardware
     the other set.
 
 1. In each set, label all hardware with a permanent marker. Write directly on
-the hardware.
+the hardware:
 
     1. Label the laptops ("Quarantined Computers") "Q1" and "Q2".
     1. Label one USB drive from each set with <span class="qboot">Q1 BOOT</span> or <span class="qboot">Q2 BOOT</span>.

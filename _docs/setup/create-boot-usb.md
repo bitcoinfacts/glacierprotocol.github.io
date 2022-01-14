@@ -81,7 +81,7 @@ copy there.
         security analysis, see the design document.
 
         You can verify this is the official Ubuntu fingerprint
-        [here](https://old-releases.ubuntu.com/releases/18.04.6/SHA256SUMS),
+        [here](https://releases.ubuntu.com/releases/18.04.6/SHA256SUMS),
         or follow Ubuntu's full verification process using this guide.
 
 1. Create the <span class="setupboot">SETUP 1 BOOT</span> USB:
@@ -161,9 +161,11 @@ copy there.
                 $ cd $HOME/Downloads
                 ```
             1.  
-                ```
-                $ sudo cmp -n `stat -f '%z' ubuntu-18.04.6-desktop-amd64.img.dmg` ubuntu-18.04.6-desktop-amd64.img.dmg USB-device-identifier-here
-                ```
+                <pre>
+                $ sudo cmp -n `stat -f '%z' ubuntu-18.04.6-desktop-am
+                d64.img.dmg` ubuntu-18.04.6-desktop-amd64.img.dmg <span class="primary">USB-dev
+                ice-identifier-here</span>
+                </pre>
             1. Wait a few minutes for the verification process to complete.
             1. If all goes well, the command will output no data, returning to
             your usual terminal prompt.
